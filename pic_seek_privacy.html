@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicSeek 隐私政策</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 18px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin-top: 30px;
+            background: linear-gradient(90deg, #eff6ff 0%, #ffffff 100%);
+        }
+        p, li {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>PicSeek 隐私政策</h1>
+    <p>更新日期：2026年4月24日</p>
+    <p>生效日期：2026年4月24日</p>
+
+    <p>欢迎使用 PicSeek（以下简称“本应用”）。我们非常重视用户的隐私和个人信息保护。本隐私政策旨在向您说明我们如何收集、使用、存储和保护您的个人信息。</p>
+
+    <h2>一、我们收集的信息</h2>
+    <p>为了向您提供核心的图片搜索和 AI 处理功能，我们可能会收集以下信息：</p>
+    <ul>
+        <li><span class="highlight">设备信息：</span>包括设备型号、操作系统版本、唯一设备标识符（IMEI/Android ID/IDFA等）、网络状态。</li>
+        <li><span class="highlight">媒体库信息：</span>为了实现相册扫描和 AI 索引，我们需要访问您的图片和视频文件。这些数据主要在本地处理。</li>
+        <li><span class="highlight">日志信息：</span>在您使用应用时，我们会自动记录应用崩溃情况和交互日志（通过 Firebase Analytics）。</li>
+    </ul>
+
+    <h2>二、权限申请说明</h2>
+    <table>
+        <tr>
+            <th>权限名称</th>
+            <th>使用目的</th>
+        </tr>
+        <tr>
+            <td>存储权限 (Read/Write)</td>
+            <td>扫描相册媒体文件、保存 AI 处理后的图片及压缩文件。</td>
+        </tr>
+        <tr>
+            <td>前台服务权限</td>
+            <td>用于在后台持续进行媒体库与 AI 索引的同步（MediaAiSyncService）。</td>
+        </tr>
+        <tr>
+            <td>通知权限</td>
+            <td>向您反馈 AI 处理进度、同步任务状态。</td>
+        </tr>
+        <tr>
+            <td>网络权限</td>
+            <td>用于登录验证、应用稳定性统计及基础数据更新。</td>
+        </tr>
+    </table>
+
+    <h2>三、第三方 SDK 使用</h2>
+    <p>为了提供更丰富的功能，本应用集成了以下第三方 SDK：</p>
+    <table>
+        <tr>
+            <th>SDK名称</th>
+            <th>服务方</th>
+            <th>使用场景/目的</th>
+        </tr>
+        <tr>
+            <td>Google ML Kit</td>
+            <td>Google</td>
+            <td>提供图片文字识别 (OCR)、人脸识别、物体检测功能。</td>
+        </tr>
+        <tr>
+            <td>Firebase</td>
+            <td>Google</td>
+            <td>用于用户登录 (Auth) 及应用使用情况统计 (Analytics)。</td>
+        </tr>
+        <tr>
+            <td>MMKV</td>
+            <td>腾讯</td>
+            <td>用于高效存储应用配置和用户本地偏好设置。</td>
+        </tr>
+        <tr>
+            <td>Coil</td>
+            <td>开源社区</td>
+            <td>用于高性能图片加载和内存缓存管理。</td>
+        </tr>
+    </table>
+
+    <h2>四、数据安全与本地化处理</h2>
+    <p><span class="highlight">重要提示：</span>本应用的核心 AI 功能（如 OCR、识别、索引）主要在您的设备本地完成。除非您主动使用云端同步功能，否则您的原始图片不会上传至我们的服务器。</p>
+
+    <h2>五、用户权利与账号注销</h2>
+    <p>您有权随时访问、更正您的个人信息。如果您决定不再使用本应用，可以随时在“设置”中申请注销账号。详情请参阅《用户注销协议》。</p>
+
+    <h2>六、联系我们</h2>
+    <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+    <p>邮箱：support@wkq.photo</p>
+
+    <div class="footer">
+        Copyright © 2026 PicSeek Team. All Rights Reserved.
+    </div>
+</div>
+</body>
+</html>
