@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FieldCam 隐私协议</title>
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --card: #ffffff;
+            --text: #1f2933;
+            --muted: #52606d;
+            --line: #d9e2ec;
+            --accent: #0b6e4f;
+            --accent-soft: #e6f4ee;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(180deg, #eef3f7 0%, #f8fafc 100%);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        .wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 20px 56px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b6e4f 0%, #1f8f6a 100%);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 48px rgba(15, 23, 42, 0.14);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.25;
+        }
+
+        .hero p {
+            margin: 12px 0 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .meta span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            padding: 0 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            font-size: 13px;
+        }
+
+        .card {
+            margin-top: 20px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 22px;
+            line-height: 1.35;
+        }
+
+        h3 {
+            margin: 22px 0 10px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        p {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .note {
+            margin-top: 14px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: var(--accent-soft);
+            color: #184e3b;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            .wrap {
+                padding: 20px 14px 40px;
+            }
+
+            .hero {
+                padding: 24px 18px;
+                border-radius: 16px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .card {
+                padding: 18px;
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="wrap">
+    <section class="hero">
+        <h1>FieldCam 隐私协议</h1>
+        <p>本隐私协议用于说明 FieldCam 在您使用拍照、定位、元数据写入、本地存储、相册导入以及 FTP/FTPS/SFTP 上传等功能时，对信息的处理方式。</p>
+        <div class="meta">
+            <span>适用产品：FieldCam / Open Geo Camera</span>
+            <span>文档版本：v1.0</span>
+            <span>更新日期：2026-05-15</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>1. 适用范围</h2>
+        <p>本协议适用于您通过 FieldCam 应用使用以下功能时的信息处理活动：</p>
+        <ul>
+            <li>现场拍照与相册导入</li>
+            <li>定位信息采集与地理标签写入</li>
+            <li>EXIF、IPTC、XMP 等元数据写入与编辑</li>
+            <li>照片及记录的本地保存、展示与管理</li>
+            <li>通过 FTP、FTPS、SFTP 等方式将照片上传至您自行配置的服务器</li>
+        </ul>
+        <div class="note">
+            当前版本不以广告推荐、用户画像或社交分发为目的处理您的个人信息。
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>2. 我们处理的信息类型</h2>
+
+        <h3>2.1 您主动提供或触发处理的信息</h3>
+        <ul>
+            <li>您拍摄或导入的照片文件</li>
+            <li>您填写或编辑的标题、说明、关键词、版权、来源、作者、地理描述等元数据</li>
+            <li>您配置的上传服务器信息，例如主机地址、端口、用户名、远程目录、传输协议及相关开关选项</li>
+            <li>您保存的模板配置、自定义字段和工作流参数</li>
+        </ul>
+
+        <h3>2.2 设备权限对应的信息</h3>
+        <ul>
+            <li>相机权限：用于拍摄照片</li>
+            <li>位置权限：用于获取当前位置，并在您触发相关功能时写入照片元数据或生成地图叠加信息</li>
+            <li>相册或媒体访问权限：用于选择、导入、展示和保存照片</li>
+        </ul>
+
+        <h3>2.3 应用运行过程中产生的信息</h3>
+        <ul>
+            <li>照片处理记录，例如拍摄时间、处理状态、上传状态、重试次数、远程路径等</li>
+            <li>与上传任务相关的必要状态信息，例如连接中、上传中、失败原因等</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>3. 我们如何使用这些信息</h2>
+        <p>我们处理上述信息，仅用于实现和支持应用核心功能，包括但不限于：</p>
+        <ul>
+            <li>完成拍照、相册导入和照片展示</li>
+            <li>将地理位置、时间信息和业务元数据写入照片文件</li>
+            <li>在本地生成可查询、可追踪的照片记录</li>
+            <li>根据您的配置，将照片上传到您指定的服务器</li>
+            <li>在上传失败时执行排队、重试和状态提示</li>
+            <li>帮助您在工作台中查看记录详情、上传状态和处理结果</li>
+        </ul>
+        <div class="note">
+            未经您的主动操作或明确配置，应用不会将照片自动上传到应用开发者控制的服务器。
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>4. 本地存储与设备侧处理</h2>
+        <p>FieldCam 的核心设计以本地处理为优先。您的大部分数据会首先保存在您的设备中，包括：</p>
+        <ul>
+            <li>拍摄或导入后的照片文件</li>
+            <li>写入后的元数据内容</li>
+            <li>本地工作记录、模板配置、上传配置、地图源配置</li>
+            <li>上传任务状态、失败原因、远程路径等业务记录</li>
+        </ul>
+        <p>这些信息通常会保存在设备本地存储、系统相册或应用本地数据库中，用于支持离线优先、失败恢复和工作流追踪能力。</p>
+    </section>
+
+    <section class="card">
+        <h2>5. 照片上传与第三方服务器</h2>
+        <p>当您启用 FTP、FTPS、SFTP 上传功能时，相关照片和您填写的元数据可能会发送到您自行配置或指定的服务器。</p>
+        <ul>
+            <li>服务器由您或您的组织控制，或由您明确指定</li>
+            <li>上传内容可能包括照片本体及其内嵌的地理位置、时间、标题、关键词、版权等元数据</li>
+            <li>应用会在本地保存必要的上传配置与任务状态，以支持后续重试和进度展示</li>
+        </ul>
+        <div class="note">
+            请您在启用上传前，自行确认远程服务器的合规性、安全性以及访问控制策略，避免将敏感照片上传至不受信任环境。
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>6. 权限使用说明</h2>
+        <ul>
+            <li><strong>相机权限</strong>：用于现场拍照。</li>
+            <li><strong>位置权限</strong>：用于获取经纬度、精度等定位信息，并在您拍照、导入或写入元数据时使用。</li>
+            <li><strong>媒体访问权限</strong>：用于从系统相册选择图片、保存照片到系统相册、显示照片内容。</li>
+            <li><strong>网络权限</strong>：用于测试上传连接、执行 FTP/FTPS/SFTP 上传以及获取您配置的地图瓦片资源。</li>
+        </ul>
+        <p>如果您拒绝授予某项权限，可能导致对应功能无法正常使用，但不会影响与该权限无关的其他功能。</p>
+    </section>
+
+    <section class="card">
+        <h2>7. 信息共享与对外提供</h2>
+        <p>除以下情况外，我们不会主动向第三方出售、出租或以营销为目的共享您的个人信息：</p>
+        <ul>
+            <li>根据您的明确操作，将照片上传到您指定的服务器</li>
+            <li>法律法规、司法机关或主管部门依法要求提供</li>
+            <li>为保障系统安全、排查严重故障，在合法且必要的范围内处理相关信息</li>
+        </ul>
+        <p>当前版本不以内置广告、商业推荐或用户画像为目的向第三方共享您的个人信息。</p>
+    </section>
+
+    <section class="card">
+        <h2>8. 信息安全</h2>
+        <p>我们会尽量通过合理的产品设计和技术措施降低数据风险，例如：</p>
+        <ul>
+            <li>优先在本地完成拍照、元数据写入和记录管理</li>
+            <li>通过任务状态、失败记录和重试机制减少数据丢失风险</li>
+            <li>在支持的场景下优先推荐使用更安全的传输方式，例如 SFTP</li>
+        </ul>
+        <p class="muted">但请您理解，任何网络传输或本地存储方案都无法保证绝对安全。尤其在您使用第三方 FTP、FTPS、SFTP 服务器时，服务器侧安全不由本应用单独控制。</p>
+    </section>
+
+    <section class="card">
+        <h2>9. 您的权利</h2>
+        <p>您可以根据实际使用场景，自主控制和管理相关信息，包括：</p>
+        <ul>
+            <li>关闭位置权限，停止写入地理位置信息</li>
+            <li>删除本地记录、模板、上传配置或照片文件</li>
+            <li>修改、覆盖或清理照片中的元数据内容</li>
+            <li>停用自动上传或删除远程服务器配置</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>10. 未成年人保护</h2>
+        <p>如无监护人同意，未成年人不应使用需要处理真实位置、现场照片或业务记录的高级功能。监护人发现未成年人在未经同意情况下使用相关功能时，可要求停止使用并清理相关数据。</p>
+    </section>
+
+    <section class="card">
+        <h2>11. 协议更新</h2>
+        <p>当产品功能、权限范围或信息处理方式发生变化时，我们可能更新本协议。更新后的版本将通过应用页面、发布说明、项目文档或其他合理方式向您展示。</p>
+    </section>
+
+    <section class="card">
+        <h2>12. 联系与说明</h2>
+        <p>如果您对本协议内容、权限使用、照片上传或元数据处理方式有疑问，建议通过应用发布页、项目仓库或您所在组织公示的联系方式进行反馈。</p>
+        <div class="note">
+            本文档为项目文档版本的隐私协议模板，适合当前 FieldCam 功能现状使用。若您计划正式上线到应用商店或面向企业交付，建议在发布前结合实际运营主体、联系邮箱、服务器部署方式和适用法律再做一次法务审阅。
+        </div>
+    </section>
+
+    <p class="footer">FieldCam 隐私协议 HTML 文档，生成于项目文档目录 `docs/`。</p>
+</main>
+</body>
+</html>
