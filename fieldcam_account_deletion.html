@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FieldCam 注销说明</title>
+    <title>GeoLens Account Deletion Notice</title>
     <style>
         :root {
             --bg: #f3f6f9;
@@ -146,125 +146,125 @@
 <body>
 <main class="wrap">
     <section class="hero">
-        <h1>FieldCam 账号注销与数据删除说明</h1>
-        <p>本文档用于说明 FieldCam 在账号注销、应用停用以及本地数据删除场景下的处理方式，便于用户了解如何清理个人信息、业务记录和本地照片相关配置。</p>
+        <h1>GeoLens Account Deletion and Data Removal Notice</h1>
+        <p>This document explains how GeoLens handles account deletion, app deactivation, and local data cleanup, so users can understand how personal information, work records, and local photo-related settings may be removed.</p>
         <div class="meta">
-            <span>适用产品：FieldCam / Open Geo Camera</span>
-            <span>文档版本：v1.0</span>
-            <span>更新日期：2026-05-15</span>
+            <span>Applicable product: GeoLens / Open Geo Camera</span>
+            <span>Document version: v1.0</span>
+            <span>Updated: 2026-05-15</span>
         </div>
     </section>
 
     <section class="card">
-        <h2>1. 当前产品形态说明</h2>
-        <p>当前版本的 FieldCam 主要以本地工作流为主，核心功能包括拍照、定位、元数据写入、本地记录管理以及按用户配置上传到指定服务器。</p>
-        <p>在当前产品形态下：</p>
+        <h2>1. Current Product Form</h2>
+        <p>The current version of GeoLens is mainly a local-first workflow tool. Core features include photo capture, location acquisition, metadata writing, local record management, and optional uploads to user-configured servers.</p>
+        <p>Under the current product model:</p>
         <ul>
-            <li>应用可能不存在统一的云端注册账号体系</li>
-            <li>大部分数据默认保存在您的设备本地或您自行配置的远程服务器中</li>
-            <li>如果后续版本接入组织账号、云同步或运营后台，本说明也可作为账号注销与数据删除流程的基础模板</li>
+            <li>The app may not provide a unified cloud account system</li>
+            <li>Most data is stored locally on your device or on servers configured by you</li>
+            <li>If future versions introduce organization accounts, cloud sync, or backend services, this document can serve as the basis for account deletion and data removal flows</li>
         </ul>
         <div class="note">
-            如果您当前使用的是纯本地版本，所谓“注销”更多对应为“停用应用并清理本地数据、上传配置和本地记录”。
+            If you are using a purely local version, “account deletion” usually means stopping use of the app and clearing local data, upload settings, and local records.
         </div>
     </section>
 
     <section class="card">
-        <h2>2. 您可以删除或清理的数据范围</h2>
-        <p>根据当前项目实际能力，您可以处理的数据通常包括：</p>
+        <h2>2. Data You Can Delete or Clear</h2>
+        <p>Based on the current capabilities of the project, the data you can usually clear includes:</p>
         <ul>
-            <li>本地照片记录与工作台记录</li>
-            <li>模板配置、自定义字段和元数据预设</li>
-            <li>上传服务器配置，例如 FTP、FTPS、SFTP 主机、端口、用户名、远程目录等</li>
-            <li>地图源配置和其他本地参数</li>
-            <li>应用本地数据库中的上传状态、失败原因、远程路径、重试次数等任务记录</li>
-            <li>保存在设备相册或本地目录中的照片文件</li>
+            <li>Local photo records and workspace records</li>
+            <li>Template settings, custom fields, and metadata presets</li>
+            <li>Upload server settings, such as FTP, FTPS, or SFTP host, port, username, and remote directory</li>
+            <li>Map source settings and other local parameters</li>
+            <li>Upload state, failure reasons, remote paths, retry counts, and related task records stored in the app database</li>
+            <li>Photo files stored in the device gallery or local directories</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>3. 本地版本的数据删除方式</h2>
-        <h3>3.1 清理应用内业务数据</h3>
-        <p>如果您不再使用 FieldCam，可按以下思路清理应用侧数据：</p>
+        <h2>3. How to Remove Data in the Local Version</h2>
+        <h3>3.1 Clear app-side business data</h3>
+        <p>If you no longer use GeoLens, you can clean app data in this order:</p>
         <ol>
-            <li>删除或停用上传服务器配置</li>
-            <li>删除自定义模板、字段配置和地图源配置</li>
-            <li>删除工作台中的本地记录</li>
-            <li>如有需要，删除应用缓存和本地数据库数据</li>
+            <li>Delete or disable upload server settings</li>
+            <li>Delete custom templates, field settings, and map source settings</li>
+            <li>Delete local records in the workspace</li>
+            <li>If needed, clear app cache and local database data</li>
         </ol>
 
-        <h3>3.2 清理设备中的照片文件</h3>
-        <p>如果您希望进一步删除通过本应用拍摄或处理后的照片，请同时检查：</p>
+        <h3>3.2 Remove photo files from the device</h3>
+        <p>If you want to further remove photos captured or processed by the app, also check:</p>
         <ul>
-            <li>系统相册中的照片</li>
-            <li>设备本地目录中的导入或处理中间文件</li>
-            <li>您自行备份到外部存储介质中的副本</li>
+            <li>Photos in the system gallery</li>
+            <li>Imported files or intermediate processing files in local directories</li>
+            <li>Any copies you backed up to external storage</li>
         </ul>
 
-        <h3>3.3 卸载应用</h3>
-        <p>当您完成上述清理后，可以通过系统卸载功能移除应用本体。卸载后，应用私有目录中的绝大多数本地配置和数据库记录通常会一并被系统删除。</p>
+        <h3>3.3 Uninstall the app</h3>
+        <p>After the above cleanup is complete, you can uninstall the app through the system uninstall flow. In most cases, the app’s private directory, local settings, and local database records are removed by the system at the same time.</p>
     </section>
 
     <section class="card">
-        <h2>4. 远程服务器数据说明</h2>
-        <p>如果您曾启用 FTP、FTPS、SFTP 上传功能，照片和相关元数据可能已经发送至您或您所在组织指定的远程服务器。</p>
-        <p>这部分数据通常不由应用开发者单独控制，因此：</p>
+        <h2>4. Notes About Remote Server Data</h2>
+        <p>If you enabled FTP, FTPS, or SFTP uploads, related photos and metadata may already have been sent to a remote server designated by you or your organization.</p>
+        <p>That portion of the data is usually not controlled solely by the app, so:</p>
         <ul>
-            <li>卸载应用或删除本地记录，并不会自动删除服务器上的文件</li>
-            <li>您需要自行登录对应服务器或联系服务器管理员处理远程文件</li>
-            <li>如服务器由组织统一维护，应遵循组织内部的数据保留和删除制度</li>
+            <li>Uninstalling the app or deleting local records does not automatically remove files from the remote server</li>
+            <li>You need to log in to the corresponding server yourself, or contact the server administrator, to handle remote files</li>
+            <li>If the server is maintained by an organization, the organization’s own retention and deletion rules should be followed</li>
         </ul>
         <div class="note">
-            如果您希望“彻底删除所有数据”，请同时清理设备本地数据和远程服务器中的上传文件。
+            If you want to “fully remove all data,” please clear both local device data and uploaded files on the remote server.
         </div>
     </section>
 
     <section class="card">
-        <h2>5. 如未来接入账号体系，注销通常包括什么</h2>
-        <p>如果后续版本接入账号注册、组织登录或云同步能力，账号注销通常会包括以下内容：</p>
+        <h2>5. What “Account Deletion” May Mean in Future Cloud Versions</h2>
+        <p>If future versions introduce account registration, organization sign-in, or cloud synchronization, account deletion may usually include:</p>
         <ul>
-            <li>停用账号登录能力</li>
-            <li>删除或匿名化与账号直接关联的个人资料</li>
-            <li>清理与账号关联的应用配置、同步记录和后台任务记录</li>
-            <li>在法律法规允许的范围内删除或去标识化保留数据</li>
+            <li>Disabling account sign-in capability</li>
+            <li>Deleting or anonymizing personal profile data directly associated with the account</li>
+            <li>Clearing app settings, synchronization records, and backend task records associated with the account</li>
+            <li>Deleting or de-identifying retained data where allowed by law</li>
         </ul>
-        <p class="muted">但为满足审计、争议处理、安全合规或法律法规要求，部分日志或必要记录可能需要在法定期间内保留。</p>
+        <p class="muted">However, to satisfy auditing, dispute handling, security compliance, or legal obligations, some logs or necessary records may still need to be retained for a legally required period.</p>
     </section>
 
     <section class="card">
-        <h2>6. 注销或删除前的提醒</h2>
+        <h2>6. Reminders Before Deletion</h2>
         <ul>
-            <li>请先确认是否仍需保留照片原件、导出副本或元数据记录</li>
-            <li>请先确认是否仍需保留远程服务器中的项目资料</li>
-            <li>如果您所在组织对现场照片和证据链有留存要求，请勿在未经授权的情况下删除相关数据</li>
-            <li>删除后，部分数据可能无法恢复</li>
+            <li>Please confirm whether you still need to keep original photos, exported copies, or metadata records</li>
+            <li>Please confirm whether project materials stored on remote servers are still needed</li>
+            <li>If your organization has retention requirements for field photos or evidence chains, do not delete related data without authorization</li>
+            <li>Once deletion is complete, some data may not be recoverable</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>7. 联系与处理渠道</h2>
-        <p>如果您使用的是组织内部部署版本、定制版本或后续接入账号体系的版本，您可以通过以下方式发起注销或删除申请：</p>
+        <h2>7. Contact and Handling Channel</h2>
+        <p>If you are using an internal organization build, a customized build, or a future version with an account system, you may request deletion through:</p>
         <ul>
-            <li>应用发布页或项目仓库公示的联系方式</li>
-            <li>您所在组织的系统管理员或数据管理员</li>
-            <li>后续版本中提供的应用内“账号注销”或“数据删除”入口</li>
+            <li>The contact method shown on the app release page or project repository</li>
+            <li>Your organization’s system administrator or data administrator</li>
+            <li>A future in-app “Account deletion” or “Data removal” entry</li>
         </ul>
-        <p>在收到有效申请后，可依据实际产品形态、部署方式和法律要求进行处理。</p>
+        <p>Once a valid request is received, it may be handled according to the actual product model, deployment mode, and legal requirements.</p>
     </section>
 
     <section class="card">
-        <h2>8. 文档使用说明</h2>
-        <p>本页面为项目文档版“注销说明”HTML，适合当前 FieldCam 以本地处理为主的版本使用。</p>
+        <h2>8. Document Usage Note</h2>
+        <p>This page is the project-level HTML notice for account deletion and data removal, suitable for the current GeoLens version that is mainly local-first.</p>
         <div class="note">
-            如果你后面准备正式上架应用商店，建议再补充以下真实信息后使用：
-            <br>1. 运营主体名称
-            <br>2. 注销申请邮箱或联系电话
-            <br>3. 删除处理时限
-            <br>4. 是否存在云端账号、云端同步或后台日志保留策略
+            If you later plan to publish to an app store, it is recommended to replace this template with your actual information, including:
+            <br>1. Operating entity name
+            <br>2. Deletion request email or contact number
+            <br>3. Processing time limit
+            <br>4. Whether cloud accounts, cloud sync, or backend log retention are involved
         </div>
     </section>
 
-    <p class="footer">FieldCam 账号注销与数据删除说明 HTML 文档，生成于项目文档目录 `docs/`。</p>
+    <p class="footer">GeoLens account deletion and data removal HTML document.</p>
 </main>
 </body>
 </html>
