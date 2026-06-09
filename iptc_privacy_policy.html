@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PressIPTC 隐私政策</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --bg-color: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1D1D1F;
+            --text-muted: #86868B;
+            --border-color: #E5E5EA;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .update-time {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+            color: var(--text-main);
+        }
+
+        p, li {
+            font-size: 15px;
+            color: #3A3A3C;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #F5F5F7;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #515154;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #F5F5F7;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 24px;
+                margin: 10px auto;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PressIPTC 隐私政策</h1>
+        <div class="update-time">更新日期：2026年6月9日</div>
+
+        <div class="highlight-box">
+            <p><strong>【特别提示】</strong> 我们非常重视新闻从业人员以及摄影师的隐私安全。<strong>PressIPTC 是一款本地优先的图像元数据管理及速传工具。</strong> 除非您手动配置并指定了图片分发的目标服务器（如您报社或通讯社的私有 FTP/SFTP/WebDAV），否则您的图片及敏感凭证<strong>绝对不会</strong>被上传到我们的任何服务器或未授权第三方。</p>
+        </div>
+
+        <h2>一、 我们如何收集和使用您的信息</h2>
+        <p>我们收集信息的目的仅用于保障相机的正常运作、IPTC 模板的保存以及后台断点续传的稳定运行。主要包括：</p>
+        <ul>
+            <li><strong>相机与照片数据：</strong> 当您使用自定义相机拍照或批量导入相册照片时，我们会读取这些照片以写入 IPTC/XMP 元数据。这些数据全部保存在您的应用沙盒本地。</li>
+            <li><strong>地理位置信息 (GPS) 与经纬度逆地理编码：</strong> 当您拍照或刷新定位时，我们需要获取您的 GPS 经纬度及海拔高度，并将其封装进照片的 EXIF/XMP 段中。
+            <strong>同时，为了在元数据模板中自动为您填充拍摄地点的国家（Country）、省/州（State）和城市（City）等文字地名，本应用在获取您的经纬度后需要进行逆地理编码解析。</strong>
+            为极致保护您的个人位置隐私，我们采用了<strong>离线优先</strong>的解析方案：
+                <ol>
+                    <li><strong>本地离线反编码（优先）</strong>：优先通过内置在手机本地的离线城市空间数据库进行检索与匹配，该过程完全在设备本地进行，没有任何网络上传行为。</li>
+                    <li><strong>系统原生 Geocoder 在线解析（降级）</strong>：若本地数据库无法匹配到当前地名，应用将调用 <strong>Android 系统自带的原生 Geocoder 服务</strong> 连网在线解析获取国家和地区名称，这属于系统底层组件请求，我们不会中转或留存您的任何解析历史。</li>
+                </ol>
+            </li>
+            <li><strong>服务器配置数据：</strong> 为了实现速传，您配置的服务器地址、协议、用户名及密码会使用 Android 安全存储技术保存在本机的 SharedPreferences 中。</li>
+        </ul>
+
+        <h2>二、 我们需要的设备权限</h2>
+        <p>为向您提供完整的拍摄与发稿服务，我们可能会在您使用过程中申请以下系统权限：</p>
+        <ul>
+            <li><strong>相机权限 (`android.permission.CAMERA`)：</strong> 用于拉起自定义快门或系统相机完成现场拍摄。</li>
+            <li><strong>存储/相册读取权限 (`android.permission.READ_MEDIA_IMAGES` / `READ_EXTERNAL_STORAGE`)：</strong> 用于从系统相册批量导入图片、应用模板，并读取照片字节流以支持后台分发。</li>
+            <li><strong>定位权限 (`android.permission.ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION`)：</strong> 用于在拍摄瞬间抓取精确的 GPS 数据，完成新闻照片位置信息的落盘校准。</li>
+        </ul>
+
+        <h2>三、 第三方 SDK 的集成与个人信息共享</h2>
+        <p>为了保障 App 的稳定运行以及提供定位、支付、登录、广告等丰富功能，我们在应用中集成了一些第三方 SDK。我们仅会出于合法、正当、必要、特定、明确的目的共享您的信息。以下是我们接入的第三方 SDK 详情表：</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>SDK 名称</th>
+                    <th>服务提供方</th>
+                    <th>收集的个人信息类型</th>
+                    <th>使用目的及场景</th>
+                    <th>隐私政策/官网链接</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Google Play 服务定位 SDK</strong></td>
+                    <td>Google LLC</td>
+                    <td>设备标识符、网络信息、精确定位信息</td>
+                    <td>在 Google Play 服务环境下，为用户提供精确的 GPS 经纬度提取与地理校准服务</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Google 账户登录 SDK (Google Sign-In)</strong></td>
+                    <td>Google LLC</td>
+                    <td>Google 账号基础信息（Email 地址、头像链接、显示名称、用户唯一标识符）</td>
+                    <td>为用户提供一键式安全登录方式，绑定和识别用户的专业版或订阅状态</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Google Play 结算服务 SDK (Google Play Billing)</strong></td>
+                    <td>Google LLC</td>
+                    <td>交易账单信息、购买凭证、订单 ID（不收集具体的银行卡等敏感金融信息）</td>
+                    <td>提供应用内增值订阅、高级专业版购买与账号激活服务，保障交易安全</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Google 移动广告 SDK (AdMob)</strong></td>
+                    <td>Google LLC</td>
+                    <td>设备标识符（如 AdID）、IP 地址、设备基本配置</td>
+                    <td>向非付费订阅用户合理展示和推荐广告，以支持软件的可持续运营</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>四、 信息安全与存储期限</h2>
+        <p>我们严格保障您的数据安全：</p>
+        <ul>
+            <li><strong>防篡改签名与哈希：</strong> 为了防止新闻照片在二次传输中被第三方窃听或恶意修改，我们会利用 SHA-256 算法生成只针对图像像素的单向哈希，并保存在图片中。</li>
+            <li><strong>免云端存储：</strong> 您的所有服务器密码、模板历史、发稿记录均**不进行任何云端备份**，全部储存在本机的 Room 数据库和应用沙盒中，您的设备即是唯一的数据中心。</li>
+            <li><strong>临时缓存处理：</strong> 上传过程中产生的临时验签拷贝，会在每次上传流程结束后立即在内存和磁盘上进行擦除。</li>
+        </ul>
+
+        <h2>五、 您的权利与注销</h2>
+        <p>您对您的本地数据拥有绝对控制权。您随时可以在应用的“设置”中修改或清空默认模板及服务器配置。若您希望注销服务并擦除数据，请参阅我们的《注销协议》进行原地一键清理。</p>
+
+        <h2>六、 隐私政策的更新</h2>
+        <p>随着本软件功能的迭代，我们可能会不定期更新本隐私政策。若发生重大变更，我们会在应用启动时或通过页面提示向您公示，请您及时关注。</p>
+
+        <footer>
+            PressIPTC 影像传输工作流项目组<br>
+            © 2026 PressIPTC. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>

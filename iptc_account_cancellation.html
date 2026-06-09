@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PressIPTC 账号与本地数据注销协议</title>
+    <style>
+        :root {
+            --primary-color: #FF3B30;
+            --bg-color: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1D1D1F;
+            --text-muted: #86868B;
+            --border-color: #E5E5EA;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .update-time {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+            color: var(--text-main);
+        }
+
+        p, li {
+            font-size: 15px;
+            color: #3A3A3C;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .warning-box {
+            background-color: #FFF2F2;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #FFD1D1;
+        }
+
+        .warning-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #D32F2F;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 24px;
+                margin: 10px auto;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PressIPTC 账号与本地数据注销协议</h1>
+        <div class="update-time">生效日期：2026年6月9日</div>
+
+        <div class="warning-box">
+            <p>【特别警示】 注销是一项不可逆的行为。由于 PressIPTC 采用“本地隐私优先”架构，注销操作意味着我们将彻底在您的手机上销毁所有机密配置、服务器凭证以及工作记录。一旦执行，任何本地数据将无法挽回，请您务必谨慎操作。</p>
+        </div>
+
+        <h2>一、 注销所包含的数据销毁范围</h2>
+        <p>当您选择注销本应用并清除本地数据时，以下所有敏感数据将被永久性物理擦除：</p>
+        <ul>
+            <li><strong>服务器配置文件（Server Profiles）：</strong> 所有已配置的 FTP, FTPS, SFTP, WebDAV, SMB 及 HTTP 服务器的主机地址、接口号、账号以及经强加密存储的访问密码。</li>
+            <li><strong>本地元数据模板（IPTC Templates）：</strong> 您为特定题材（如突发、赛事）建立的所有个人 IPTC 元数据模板（包含大标题、创作者签名、版权声明等所有字段）。</li>
+            <li><strong>历史发稿队列记录（Upload History）：</strong> 本地 Room 数据库中保存的 pending、uploading、failed 以及已上传的照片路径、排队状态、传输时间及可能的失败日志。</li>
+            <li><strong>第三方登录态缓存：</strong> 对于通过 Google 账户一键登录生成的本地 Token、个人头像 URL、邮箱地址及临时绑定缓存，将一并在此设备上彻底解绑并销毁。</li>
+            <li><strong>本地缓存（Temporary Cache）：</strong> 包含上传中为验签防篡改拷贝的临时文件、Coil 内存以及磁盘图片缓存。</li>
+        </ul>
+
+        <h2>二、 注销的实施路径</h2>
+        <p>由于我们不强制您注册网络云端账号，您的“注销”可以直接通过以下几种便捷的本地路径由您手动掌控，无需联系我们审核：</p>
+        <ul>
+            <li><strong>路径一：应用内一键清除</strong><br>进入“我的（设置）” ➡ 选择“清理/重置应用” ➡ 确认提示后，软件会自动清空底层的加密 SharedPreference 和 Room 数据库并退出应用。</li>
+            <li><strong>路径二：系统级别清除</strong><br>进入您 Android 设备的“系统设置” ➡ “应用管理” ➡ 找到 “PressIPTC” ➡ 点击“清除数据（Clear Data）”。此操作系统会触发底层内核对应用沙盒目录的彻底抹除。</li>
+        </ul>
+
+        <h2>三、 注销的后果与法律责任</h2>
+        <ul>
+            <li><strong>数据无法恢复：</strong> 注销生效后，任何人都无法（包括我们的开发团队）从任何服务器上挽回您的本地配置。如果您之后重新安装，必须重新建立模板与服务器。</li>
+            <li><strong>未尽上传任务：</strong> 队列中尚未上传成功的现场图片将会停滞。因您注销导致新闻传输延迟或未闭环，需由您自行承担相应发稿时效责任。</li>
+            <li><strong>已上传照片说明：</strong> 您在注销前已经通过本软件安全传输至您私有服务器（如报社 FTP）上的照片，不受本地注销影响，其管理与清除需依照您报社的目标服务器规定执行。</li>
+        </ul>
+
+        <footer>
+            PressIPTC 影像传输工作流项目组<br>
+            © 2026 PressIPTC. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>
