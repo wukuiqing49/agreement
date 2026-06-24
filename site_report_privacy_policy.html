@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteReport - Privacy Policy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #94a3b8;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Dark Mode Preferences */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #3b82f6;
+                --primary-hover: #60a5fa;
+                --primary-light: #172554;
+                --text-main: #f8fafc;
+                --text-muted: #cbd5e1;
+                --text-light: #64748b;
+                --bg-page: #0f172a;
+                --bg-card: #1e293b;
+                --border: #334155;
+                --border-hover: #475569;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Language visibility rules */
+        .lang-en [lang="zh"] { display: none !important; }
+        .lang-zh [lang="en"] { display: none !important; }
+
+        /* Top Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #60a5fa);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            background-color: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        @media (prefers-color-scheme: dark) {
+            header {
+                background-color: rgba(15, 23, 42, 0.8);
+            }
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Language Toggle Switch */
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 4px;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        .lang-switch span {
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .lang-switch .active-lang {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Layout Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 968px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                gap: 24px;
+            }
+            .sidebar {
+                position: static !important;
+                display: none; /* Hide TOC on mobile for clean UI */
+            }
+        }
+
+        /* Sidebar & TOC */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toc-item a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            border-left: 2px solid transparent;
+            padding-left: 12px;
+        }
+
+        .toc-item a:hover, .toc-item.active a {
+            color: var(--primary);
+            border-left-color: var(--primary);
+        }
+
+        /* Content Area */
+        .content-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 24px;
+            }
+        }
+
+        /* Document Styling */
+        .doc-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .doc-badge {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .doc-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.75px;
+            margin-bottom: 12px;
+        }
+
+        .doc-meta {
+            font-size: 14px;
+            color: var(--text-light);
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.25px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        section h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        section p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        section ul, section ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        section li {
+            margin-bottom: 8px;
+        }
+
+        /* Specific callout boxes */
+        .callout-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+
+        .callout-box p {
+            color: var(--text-main);
+            font-weight: 500;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        /* Action Panel */
+        .action-panel {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--bg-page);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-action:hover {
+            border-color: var(--border-hover);
+            color: var(--text-main);
+            background-color: var(--bg-card);
+        }
+
+        .btn-action.btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-action.btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 60px auto 40px;
+            padding: 0 24px;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-light);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* Simple Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--text-main);
+            color: var(--bg-page);
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+            header, .sidebar, .action-panel, footer, .progress-bar {
+                display: none !important;
+            }
+            .main-container {
+                grid-template-columns: 1fr;
+                margin: 0;
+                padding: 0;
+            }
+            .content-card {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body class="lang-en">
+
+    <!-- Scroll Progress -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">S</div>
+                <div class="logo-text">SiteReport</div>
+            </div>
+
+            <div class="header-actions">
+                <!-- Lang Switcher -->
+                <div class="lang-switch" onclick="toggleLanguage()">
+                    <span id="btnEn" class="active-lang">EN</span>
+                    <span id="btnZh">中</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar - Table of Contents -->
+        <aside class="sidebar">
+            <h3 class="toc-title">
+                <span lang="en">Sections</span>
+                <span lang="zh">目录导览</span>
+            </h3>
+            <ul class="toc-list" id="privacyToc">
+                <li class="toc-item active"><a href="#p-intro"><span lang="en">1. Introduction</span><span lang="zh">1. 前言与介绍</span></a></li>
+                <li class="toc-item"><a href="#p-collect"><span lang="en">2. Data Collection</span><span lang="zh">2. 我们如何收集信息</span></a></li>
+                <li class="toc-item"><a href="#p-use"><span lang="en">3. Information Usage</span><span lang="zh">3. 信息的使用目的</span></a></li>
+                <li class="toc-item"><a href="#p-security"><span lang="en">4. Data Security</span><span lang="zh">4. 数据安全与存储</span></a></li>
+                <li class="toc-item"><a href="#p-thirdparty"><span lang="en">5. Third-Party Services</span><span lang="zh">5. 第三方SDK与服务</span></a></li>
+                <li class="toc-item"><a href="#p-children"><span lang="en">6. Children's Privacy</span><span lang="zh">6. 未成年人隐私保护</span></a></li>
+                <li class="toc-item"><a href="#p-contact"><span lang="en">7. Contact & Support</span><span lang="zh">7. 联系与支持方式</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Document Card -->
+        <main class="content-card">
+            
+            <div class="doc-header">
+                <span class="doc-badge">
+                    <span lang="en">Privacy Protection</span>
+                    <span lang="zh">隐私安全保护</span>
+                </span>
+                <h1 class="doc-title">
+                    <span lang="en">Privacy Policy</span>
+                    <span lang="zh">用户隐私政策</span>
+                </h1>
+                <div class="doc-meta">
+                    <span><strong>Effective Date:</strong> June 24, 2026</span>
+                    <span><strong>App Version:</strong> V1.0.1</span>
+                </div>
+            </div>
+
+            <div class="doc-body">
+                <section id="p-intro">
+                    <h2>
+                        <span lang="en">1. Introduction</span>
+                        <span lang="zh">1. 前言与介绍</span>
+                    </h2>
+                    <p lang="en">Welcome to SiteReport. SiteReport is a professional mobile inspection recording tool designed for engineering inspections, construction acceptance, property inspection, safety inspection, and equipment maintenance. We are highly committed to protecting the privacy of our users. This Privacy Policy details how we collect, use, and protect your information when you use our services.</p>
+                    <p lang="zh">欢迎使用 SiteReport！SiteReport 是一款面向工程巡检、施工验收、物业检查、安全检查和设备维护等场景的专业移动端巡检记录工具。我们高度重视用户的隐私保护。本隐私政策详细阐述了您在使用我们的服务时，我们如何收集、使用和保护您的个人信息。</p>
+                    
+                    <div class="callout-box">
+                        <p lang="en"><strong>Offline-First Principle:</strong> SiteReport is built on an offline-first design. All of your field inspection data, photos, signatures, and generated PDF reports are stored locally on your device by default. We do not automatically upload your local documents or private photos to our official servers.</p>
+                        <p lang="zh"><strong>重要原则 - 离线优先：</strong>SiteReport 采用离线优先的设计机制。默认情况下，您的所有现场巡检记录、照片、电子签名以及导出的 PDF 报告均保存在您手机的本地沙盒中。我们不会主动将您的本地记录或拍照文件上传至我们的服务器。</p>
+                    </div>
+                </section>
+
+                <section id="p-collect">
+                    <h2>
+                        <span lang="en">2. Data Collection</span>
+                        <span lang="zh">2. 我们如何收集信息</span>
+                    </h2>
+                    <p lang="en">To provide stable inspection services, we may collect the following categories of information during your usage:</p>
+                    <p lang="zh">为了能够向您提供正常、稳定的巡检记录与报告导出服务，我们在您使用过程中可能会收集或需要您授权以下信息：</p>
+                    <ul>
+                        <li>
+                            <strong lang="en">Field Photos & Camera Access:</strong>
+                            <span lang="en"> Since the core feature is capturing evidence, the App requires camera and storage access permissions to take photos, link them to inspection items, and archive them locally.</span>
+                            <strong lang="zh">现场照片与相机权限：</strong>
+                            <span lang="zh">鉴于巡检取证核心功能的需要，应用需要申请相机和文件读写权限，以便为具体的检查项拍摄证据照片，并在本地进行分类归档。</span>
+                        </li>
+                        <li>
+                            <strong lang="en">GPS & Location Information:</strong>
+                            <span lang="en"> With your explicit permission, we record geographic coordinates (latitude, longitude), elevation, and location accuracy to embed GPS watermarks on captured photos. We also provide offline reverse geocoding to automatically resolve city and country information from coordinates.</span>
+                            <strong lang="zh">GPS 定位与地理位置信息：</strong>
+                            <span lang="zh">在您授权定位权限后，我们将读取地理坐标（经纬度）、海拔以及定位精度，用于在拍照时生成带有地理防篡改的水印，并在本地反查出具体省份和城市以生成验收报告。</span>
+                        </li>
+                        <li>
+                            <strong lang="en">E-Signatures:</strong>
+                            <span lang="en"> For engineering and client acceptance validation, you may perform e-signing inside the app. Signatures are saved strictly on your local device for integration into the generated PDF reports.</span>
+                            <strong lang="zh">电子签名：</strong>
+                            <span lang="zh">为了满足工程或物业的验收确认，我们在应用内提供了手写签名功能。该签名仅以图片形式保存在您本地，用于拼装生成 PDF 报告。</span>
+                        </li>
+                        <li>
+                            <strong lang="en">User-Configured Cloud Storage Servers:</strong>
+                            <span lang="en"> The App supports uploading reports to personal servers (FTP, SFTP, WebDAV, SMB/NAS). The configuration profiles (host, port, credentials) are stored securely in local app storage (encrypted via Android MMKV/DataStore) and are used only when you trigger synchronization.</span>
+                            <strong lang="zh">用户配置的第三方存储服务器：</strong>
+                            <span lang="zh">App 支持由用户自主配置并同步数据至自建服务器（如 FTP、SFTP、WebDAV、NAS 存储）。此类凭证信息在本地加密存储，仅在您手动触发上传时使用，我们绝对不会获取此类第三方凭证。</span>
+                        </li>
+                        <li>
+                            <strong lang="en">Google SDK Telemetry:</strong>
+                            <span lang="en"> If you sign in via Google Account, make in-app purchases, or interact with ads, the integrated Google SDKs may collect related identifiers, Google ID tokens, purchase billing records, and anonymous device state diagnostics.</span>
+                            <strong lang="zh">Google SDK 基础信息：</strong>
+                            <span lang="zh">当您使用 Google 账号登录、发起应用内购买/订阅或进行广告交互时，集成的 Google SDK 会收集对应的账户标识、Google ID 令牌、购买记录及设备状态标识符。</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="p-use">
+                    <h2>
+                        <span lang="en">3. Information Usage</span>
+                        <span lang="zh">3. 信息的使用目的</span>
+                    </h2>
+                    <p lang="en">We utilize the collected information strictly for the following purposes:</p>
+                    <p lang="zh">我们使用和处理上述收集的信息，严格受限于以下目的：</p>
+                    <ol>
+                        <li lang="en"><strong>Inspection Functionality:</strong> Managing your projects, resolving customized templates, capturing inspection photos, and generating PDF reports.</li>
+                        <li lang="zh"><strong>基础功能交付：</strong>建立与管理巡检项目、匹配巡检模板、处理拍照以及最终拼装生成专业的 PDF 报告。</li>
+                        
+                        <li lang="en"><strong>Location Verification:</strong> Overlaying timestamps and GPS watermarks on photos to serve as inspection evidence for project supervisors.</li>
+                        <li lang="zh"><strong>定位留痕验证：</strong>为照片及验收单据附加不可篡改的 GPS 坐标与时间戳，作为真实有效的巡检证据供工程或客户核实。</li>
+
+                        <li lang="en"><strong>Pro License Billing:</strong> Facilitating in-app purchases (Pro upgrade, no-watermark PDF features) through Google Play Billing.</li>
+                        <li lang="zh"><strong>专业版开通：</strong>通过 Google Play 结算框架为用户办理付费订阅、去水印升级及高级功能解锁。</li>
+
+                        <li lang="en"><strong>Service Performance Analysis:</strong> Resolving application crashes, performance lags, and diagnosing anonymous usage metrics to improve stability.</li>
+                        <li lang="zh"><strong>应用稳定性优化：</strong>收集匿名偶发崩溃日志、卡顿报告，用于诊断并改进核心相机与报告生成的排查机制。</li>
+                    </ol>
+                </section>
+
+                <section id="p-security">
+                    <h2>
+                        <span lang="en">4. Data Security</span>
+                        <span lang="zh">4. 数据安全与存储</span>
+                    </h2>
+                    <p lang="en">Because SiteReport values user security and follows an offline-first design pattern:</p>
+                    <p lang="zh">因为 SiteReport 秉承安全至上和离线优先的原则：</p>
+                    <ul>
+                        <li lang="en">All inspection database files are saved in the app's secure private sandbox directory. Android OS prevents unauthorized applications from accessing this sandbox.</li>
+                        <li lang="zh">所有的巡检数据库、检查详情均保存在 App 独立的私有沙盒目录下，Android 系统沙盒保护机制能有效杜绝外部程序窃取。</li>
+                        <li lang="en">We secure server credentials, billing states, and key settings using Tencent MMKV and Android Preferences, utilizing encrypted storage strategies where appropriate.</li>
+                        <li lang="zh">用户的自建服务器配置、专业版购买凭证等敏感配置信息均经过二次安全混淆，保存在受保护的本地存储（MMKV / DataStore）中。</li>
+                        <li lang="en">If you choose to uninstall the application, all local databases, custom templates, and inspection items within the sandbox will be permanently deleted. We advise backing up reports (exporting as PDF or uploading to your NAS/SFTP) before deleting the app.</li>
+                        <li lang="zh">若您直接卸载应用程序，沙盒内所有未导出的本地巡检记录、自定义模板和数据都将被永久抹除。我们建议您在卸载前将重要的报告打包导出为 PDF，或者同步到您的自建服务器中。</li>
+                    </ul>
+                </section>
+
+                <section id="p-thirdparty">
+                    <h2>
+                        <span lang="en">5. Third-Party Services</span>
+                        <span lang="zh">5. 第三方SDK与服务</span>
+                    </h2>
+                    <p lang="en">Our application incorporates third-party SDKs to implement vital features. These providers may collect data independently subject to their own policies:</p>
+                    <p lang="zh">为支持部分支付、统计、定位等核心场景，应用集成了授权的第三方 SDK 服务，这些服务商的信息收集需遵循其自身的隐私政策：</p>
+                    <table style="width:100%; border-collapse:collapse; margin-top:16px; margin-bottom:16px; font-size:14px;">
+                        <thead>
+                            <tr style="background-color: var(--bg-page); border-bottom: 2px solid var(--border);">
+                                <th style="padding: 12px; text-align: left;"><span lang="en">SDK Name</span><span lang="zh">服务商/SDK名称</span></th>
+                                <th style="padding: 12px; text-align: left;"><span lang="en">Usage & Scenario</span><span lang="zh">用途与场景</span></th>
+                                <th style="padding: 12px; text-align: left;"><span lang="en">Privacy Policy</span><span lang="zh">隐私政策链接</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px;">Google Play Billing</td>
+                                <td style="padding: 12px;"><span lang="en">Processing subscription and one-time Pro purchases</span><span lang="zh">处理专业版买断及订阅的支付服务</span></td>
+                                <td style="padding: 12px;"><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary);">Google Privacy</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px;">Google Play Services Location</td>
+                                <td style="padding: 12px;"><span lang="en">Obtaining precise GPS for watermark photos</span><span lang="zh">获取高精度 GPS 位置以输出水印</span></td>
+                                    <td style="padding: 12px;"><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary);">Google Location</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px;">AMap Location (Optional)</td>
+                                <td style="padding: 12px;"><span lang="en">Fallback positioning service for mainland China users</span><span lang="zh">针对部分无谷歌服务的定位兜底</span></td>
+                                <td style="padding: 12px;"><a href="https://lbs.amap.com/pages/privacy/" target="_blank" style="color: var(--primary);">AMap Privacy</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px;">Firebase / AdMob</td>
+                                <td style="padding: 12px;"><span lang="en">Analytics telemetry and free-tier banner/rewarded ads</span><span lang="zh">匿名性能统计与免费版广告服务</span></td>
+                                <td style="padding: 12px;"><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary);">Firebase Privacy</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="p-children">
+                    <h2>
+                        <span lang="en">6. Children's Privacy</span>
+                        <span lang="zh">6. 未成年人隐私保护</span>
+                    </h2>
+                    <p lang="en">SiteReport is directed towards adult personnel executing professional inspections and building supervision. We do not knowingly collect personal identifiable information from children under the age of 13. If we discover a child under 13 has provided us with personal information, we will take immediate steps to delete this data.</p>
+                    <p lang="zh">SiteReport 主要供具有民事行为能力的专业施工监理、物业巡检等成年从业人员使用。我们不会主动收集或要求 13 岁以下未成年人的个人信息。一旦我们发现并证实未成年人在未获得监护人同意的前提下提供了个人信息，我们将第一时间对其进行清理。</p>
+                </section>
+
+                <section id="p-contact">
+                    <h2>
+                        <span lang="en">7. Contact & Support</span>
+                        <span lang="zh">7. 联系与支持方式</span>
+                    </h2>
+                    <p lang="en">If you have any questions, compliance concerns, or suggestions regarding this Privacy Policy, please feel free to reach out to us at:</p>
+                    <p lang="zh">如果您对本隐私政策有任何疑问、建议或需要就合规事务提起申诉，请通过以下官方联系渠道与我们取得联系：</p>
+                    <p><strong>Email / 邮箱:</strong> <a href="mailto:wukuiqing@gmail.com" style="color: var(--primary); text-decoration: none;">wukuiqing@gmail.com</a></p>
+                </section>
+            </div>
+
+            <div class="action-panel">
+                <button class="btn-action" onclick="window.print()">
+                    <span>Print Policy</span>
+                </button>
+                <button class="btn-action btn-primary" onclick="copyDocument()">
+                    <span lang="en">Copy Text</span>
+                    <span lang="zh">复制协议文本</span>
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <span>© 2026 SiteReport. All rights reserved.</span>
+        </div>
+        <div class="footer-right">
+            <span lang="en">Bilingual Legal Document V1.0</span>
+            <span lang="zh">双语法务文件 V1.0</span>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span lang="en">Copied to clipboard successfully!</span>
+        <span lang="zh">协议内容已成功复制到剪贴板！</span>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        // Language Toggle
+        function toggleLanguage() {
+            const body = document.body;
+            const btnEn = document.getElementById('btnEn');
+            const btnZh = document.getElementById('btnZh');
+
+            if (body.classList.contains('lang-en')) {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-zh');
+                btnEn.classList.remove('active-lang');
+                btnZh.classList.add('active-lang');
+            } else {
+                body.classList.remove('lang-zh');
+                body.classList.add('lang-en');
+                btnZh.classList.remove('active-lang');
+                btnEn.classList.add('active-lang');
+            }
+        }
+
+        // Scrollspy & Scroll Progress Implementation
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+
+            // Scrollspy logic
+            updateTOCState();
+        });
+
+        function updateTOCState() {
+            const sections = document.querySelectorAll('.doc-body section');
+            const tocItems = document.querySelectorAll('#privacyToc .toc-item');
+            
+            let currentActiveId = "";
+            const scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+            sections.forEach(section => {
+                if (section.offsetTop - 120 <= scrollPos) {
+                    currentActiveId = section.getAttribute('id');
+                }
+            });
+
+            if (currentActiveId) {
+                tocItems.forEach(item => {
+                    item.classList.remove('active');
+                    const link = item.querySelector('a');
+                    if (link.getAttribute('href') === '#' + currentActiveId) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Copy Text Functionality
+        function copyDocument() {
+            const element = document.querySelector('.doc-body');
+            let textToCopy = "";
+            const isZh = document.body.classList.contains('lang-zh');
+
+            const paragraphs = element.querySelectorAll('h2, p, li, td');
+            paragraphs.forEach(node => {
+                const nodeLang = node.getAttribute('lang');
+                if (isZh) {
+                    if (nodeLang !== 'en') {
+                        textToCopy += node.innerText + "\n";
+                    }
+                } else {
+                    if (nodeLang !== 'zh') {
+                        textToCopy += node.innerText + "\n";
+                    }
+                }
+                if (node.tagName.toLowerCase() === 'h2') {
+                    textToCopy += "\n";
+                }
+            });
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast();
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
