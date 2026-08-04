@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AndroidManTou 专注 Android 应用、移动影像处理与现场数字化产品。">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="AndroidManTou">
+  <meta property="og:description" content="可靠、清晰、面向真实工作场景的移动软件。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heyheoi.cn/">
+  <title>AndroidManTou｜移动应用与数字化产品</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182026;
+      --muted: #667078;
+      --line: #dde2e6;
+      --soft: #f5f7f8;
+      --paper: #ffffff;
+      --primary: #185fa5;
+      --primary-dark: #124a80;
+      --success: #2f7257;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; }
+    .skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 8px 12px; color: #fff; background: var(--ink); transform: translateY(-150%); }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+    }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 750; text-decoration: none; }
+    .brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 4px; color: #fff; background: var(--primary); font-size: 12px; font-weight: 800; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { color: #485158; font-size: 14px; font-weight: 600; text-decoration: none; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links .contact-link { padding: 8px 14px; border: 1px solid #b7c0c6; border-radius: 4px; color: var(--ink); }
+    .menu-button { width: 40px; height: 40px; display: none; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 4px; background: #fff; cursor: pointer; }
+    .menu-button span, .menu-button::before, .menu-button::after { width: 18px; height: 2px; display: block; background: var(--ink); content: ""; }
+    .menu-button span { margin: 4px 0; }
+
+    .intro {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+    .intro-avatar {
+      position: absolute;
+      top: 50%;
+      right: max(4vw, calc((100vw - var(--max)) / 2));
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      opacity: .16;
+      transform: translateY(-50%);
+    }
+    .intro-content { position: relative; z-index: 2; max-width: 760px; padding: 86px 0; }
+    .eyebrow { margin: 0 0 16px; color: var(--primary); font-size: 13px; font-weight: 750; }
+    .intro h1 { margin: 0; font-size: 50px; font-weight: 720; line-height: 1.22; letter-spacing: 0; }
+    .intro-copy { max-width: 650px; margin: 24px 0 0; color: var(--muted); font-size: 18px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 9px 18px; border: 1px solid transparent; border-radius: 4px; font-size: 14px; font-weight: 650; text-decoration: none; }
+    .button-primary { color: #fff; background: var(--primary); }
+    .button-primary:hover { background: var(--primary-dark); }
+    .button-secondary { border-color: #b7c0c6; background: #fff; }
+    .button-secondary:hover { border-color: #7e8991; }
+    .summary-bar { border-bottom: 1px solid var(--line); background: #fff; }
+    .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .summary-item { padding: 22px 28px; border-right: 1px solid var(--line); }
+    .summary-item:first-child { padding-left: 0; }
+    .summary-item:last-child { border-right: 0; }
+    .summary-item strong { display: block; font-size: 15px; }
+    .summary-item span { color: var(--muted); font-size: 13px; }
+
+    .section { padding: 88px 0; }
+    .section-soft { background: var(--soft); }
+    .section-header { display: flex; align-items: end; justify-content: space-between; gap: 48px; margin-bottom: 36px; }
+    .section-label { margin: 0 0 9px; color: var(--primary); font-size: 12px; font-weight: 750; }
+    .section h2 { margin: 0; font-size: 34px; line-height: 1.3; letter-spacing: 0; }
+    .section-description { max-width: 480px; margin: 0; color: var(--muted); }
+
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .product-card { min-height: 268px; display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+    .product-card:hover { border-color: #9ca7ae; }
+    .product-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .product-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 5px; color: #fff; background: var(--primary); font-size: 13px; font-weight: 750; }
+    .product-category { color: var(--muted); font-size: 12px; }
+    .product-card h3 { margin: 30px 0 8px; font-size: 21px; }
+    .product-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .product-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: auto; padding-top: 24px; }
+    .product-links a { color: var(--primary); font-size: 13px; font-weight: 650; text-underline-offset: 4px; }
+    .product-card h3, .product-card p, .contact-value { overflow-wrap: anywhere; }
+
+    .service-list { border-top: 1px solid var(--line); }
+    .service-row { display: grid; grid-template-columns: 70px 1fr 1.4fr; gap: 30px; align-items: start; padding: 30px 0; border-bottom: 1px solid var(--line); }
+    .service-number { color: var(--primary); font-size: 13px; font-weight: 700; }
+    .service-row h3 { margin: 0; font-size: 18px; }
+    .service-row p { margin: 0; color: var(--muted); }
+
+    .legal-layout { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; }
+    .legal-copy p { margin: 16px 0 0; color: var(--muted); }
+    .legal-table { border-top: 1px solid #aeb7bd; }
+    .legal-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 24px; align-items: center; min-height: 72px; border-bottom: 1px solid var(--line); }
+    .legal-row strong { font-size: 15px; }
+    .legal-row span { color: var(--muted); font-size: 13px; }
+    .legal-actions { display: flex; gap: 8px; }
+    .legal-actions a { padding: 5px 9px; border: 1px solid var(--line); border-radius: 3px; font-size: 12px; text-decoration: none; }
+    .legal-actions a:hover { border-color: #879198; }
+
+    .contact-section { border-top: 1px solid var(--line); background: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; }
+    .contact-intro p { max-width: 430px; margin: 16px 0 0; color: var(--muted); }
+    .contact-list { margin: 0; border-top: 1px solid var(--line); }
+    .contact-item { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .contact-item dt { color: var(--muted); font-size: 13px; }
+    .contact-item dd { margin: 0; font-size: 14px; }
+    .contact-item a { color: var(--primary); text-underline-offset: 4px; }
+
+    .site-footer { border-top: 1px solid var(--line); background: var(--soft); }
+    .footer-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 13px; }
+    .footer-links { display: flex; gap: 20px; }
+
+    a:focus-visible, button:focus-visible { outline: 3px solid rgba(24, 95, 165, .28); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (max-width: 860px) {
+      .nav-links { position: fixed; inset: 69px 0 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 22px 24px; background: #fff; }
+      .menu-open .nav-links { display: flex; }
+      .nav-links a { padding: 16px 2px; border-bottom: 1px solid var(--line); font-size: 16px; }
+      .nav-links .contact-link { margin-top: 16px; text-align: center; }
+      .menu-button { display: grid; }
+      .intro-avatar { right: -110px; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .legal-layout, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: min(calc(100% - 32px), var(--max)); }
+      .intro { min-height: 500px; }
+      .intro-content { padding: 68px 0; }
+      .intro-avatar { top: 100px; right: -115px; width: 260px; height: 260px; transform: none; opacity: .1; }
+      .intro h1 { font-size: 37px; }
+      .intro-copy { font-size: 16px; }
+      .button { width: 100%; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .summary-item, .summary-item:first-child { display: flex; justify-content: space-between; gap: 18px; padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .summary-item:last-child { border-bottom: 0; }
+      .section { padding: 64px 0; }
+      .section-header { display: block; margin-bottom: 28px; }
+      .section h2 { font-size: 29px; }
+      .section-description { margin-top: 14px; }
+      .product-grid { grid-template-columns: 1fr; }
+      .product-card { min-height: 250px; }
+      .service-row { grid-template-columns: 44px 1fr; gap: 16px; }
+      .service-row p { grid-column: 2; }
+      .legal-row { grid-template-columns: 1fr; gap: 4px; padding: 17px 0; }
+      .legal-actions { margin-top: 8px; }
+      .contact-item { grid-template-columns: 90px 1fr; }
+      .footer-inner { min-height: 0; align-items: flex-start; flex-direction: column; padding: 22px 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="nav container">
+      <a class="brand" href="#top" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">AM</span><span>AndroidManTou</span></a>
+      <nav class="nav-links" id="site-nav" aria-label="主导航">
+        <a href="#products">产品</a><a href="#services">能力</a><a href="#legal">隐私与合规</a><a href="https://github.com/wukuiqing49" rel="noopener noreferrer">GitHub</a><a class="contact-link" href="#contact">联系我们</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="打开导航" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro" id="top">
+      <img class="intro-avatar" src="https://avatars.githubusercontent.com/u/13608463?v=4" alt="AndroidManTou 开发者头像" width="340" height="340">
+      <div class="intro-content container">
+        <p class="eyebrow">ANDROID 应用与移动数字化产品</p>
+        <h1>为真实工作场景，<br>打造可靠易用的软件。</h1>
+        <p class="intro-copy">专注移动影像处理、现场记录与 Android 原生应用，以清晰的产品设计和稳定的工程实现提升工作效率。</p>
+        <div class="actions"><a class="button button-primary" href="#products">查看产品</a><a class="button button-secondary" href="mailto:wukuiqing@gmail.com?subject=%E4%BA%A7%E5%93%81%E4%B8%8E%E5%90%88%E4%BD%9C%E5%92%A8%E8%AF%A2">合作咨询</a></div>
+      </div>
+    </section>
+
+    <div class="summary-bar">
+      <div class="summary-grid container">
+        <div class="summary-item"><strong>Android / Kotlin</strong><span>核心技术</span></div>
+        <div class="summary-item"><strong>影像与现场工具</strong><span>产品方向</span></div>
+        <div class="summary-item"><strong>本地优先</strong><span>隐私原则</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <div><p class="section-label">产品</p><h2>移动应用产品</h2></div>
+          <p class="section-description">覆盖图片处理、专业巡检、照片智能检索与元数据管理等场景。</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card"><div class="product-meta"><span class="product-icon">BP</span><span class="product-category">影像效率</span></div><h3>Batch Photo</h3><p>批量图片处理、格式转换、元数据、RAW、PDF 与设备端智能工具。</p><div class="product-links"><a href="b_privacy_policy.html">隐私政策</a><a href="b_account_deletion.html">数据删除</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon">SR</span><span class="product-category">现场数字化</span></div><h3>SiteReport</h3><p>面向工程巡检、施工验收、安全检查与设备维护的移动记录工具。</p><div class="product-links"><a href="site_report_privacy_policy.html">隐私政策</a><a href="site_report_account_deletion.html">数据删除</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon">PX</span><span class="product-category">本地 AI</span></div><h3>Pixora</h3><p>以设备端 OCR、识别和索引为核心的离线照片智能检索工具。</p><div class="product-links"><a href="pic_seek_privacy.html">隐私政策</a><a href="pic_seek_delete.html">账号注销</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon">GL</span><span class="product-category">专业相机</span></div><h3>GeoLens</h3><p>用于现场采集、地理信息和专业文件传输的开放相机工具。</p><div class="product-links"><a href="fieldcam_privacy_policy.html">隐私政策</a><a href="fieldcam_account_deletion.html">数据删除</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon">IP</span><span class="product-category">元数据</span></div><h3>PressIPTC</h3><p>面向摄影与内容生产的 IPTC 元数据模板及批量处理工具。</p><div class="product-links"><a href="iptc_privacy_policy.html">隐私政策</a><a href="iptc_account_cancellation.html">账号注销</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon">CM</span><span class="product-category">内容工具</span></div><h3>CaptionMeta</h3><p>用于管理图片说明、位置和内容元数据的移动效率工具。</p><div class="product-links"><a href="cm_privacy_policy.html">隐私政策</a><a href="cm_account_cancellation.html">账号注销</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services">
+      <div class="container">
+        <div class="section-header"><div><p class="section-label">能力</p><h2>产品与技术能力</h2></div><p class="section-description">从产品定义到 Android 工程实现，围绕专业移动场景持续迭代。</p></div>
+        <div class="service-list">
+          <article class="service-row"><span class="service-number">01</span><h3>Android 原生研发</h3><p>Kotlin、Jetpack Compose、模块化架构与移动端性能优化。</p></article>
+          <article class="service-row"><span class="service-number">02</span><h3>移动影像处理</h3><p>图片格式、RAW、EXIF/IPTC/XMP、OCR 与设备端智能处理。</p></article>
+          <article class="service-row"><span class="service-number">03</span><h3>现场数字化</h3><p>离线记录、照片采集、签名、工程巡检与报告生成。</p></article>
+          <article class="service-row"><span class="service-number">04</span><h3>隐私与数据管理</h3><p>遵循最小必要与本地优先原则，提供透明的数据管理说明。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="legal">
+      <div class="container legal-layout">
+        <div class="legal-copy"><p class="section-label">信任中心</p><h2>隐私与合规</h2><p>查看各产品的隐私政策、账号注销及数据删除说明。</p></div>
+        <div class="legal-table">
+          <div class="legal-row"><strong>Batch Photo</strong><span>图片工具</span><div class="legal-actions"><a href="b_privacy_policy.html">隐私</a><a href="b_account_deletion.html">删除</a></div></div>
+          <div class="legal-row"><strong>SiteReport</strong><span>移动巡检</span><div class="legal-actions"><a href="site_report_privacy_policy.html">隐私</a><a href="site_report_account_deletion.html">删除</a></div></div>
+          <div class="legal-row"><strong>Pixora</strong><span>离线照片 AI</span><div class="legal-actions"><a href="pic_seek_privacy.html">隐私</a><a href="pic_seek_delete.html">删除</a></div></div>
+          <div class="legal-row"><strong>GeoLens</strong><span>开放地理相机</span><div class="legal-actions"><a href="fieldcam_privacy_policy.html">隐私</a><a href="fieldcam_account_deletion.html">删除</a></div></div>
+          <div class="legal-row"><strong>PressIPTC</strong><span>图片元数据</span><div class="legal-actions"><a href="iptc_privacy_policy.html">隐私</a><a href="iptc_account_cancellation.html">删除</a></div></div>
+          <div class="legal-row"><strong>CaptionMeta</strong><span>图片说明工具</span><div class="legal-actions"><a href="cm_privacy_policy.html">隐私</a><a href="cm_account_cancellation.html">删除</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro"><p class="section-label">联系</p><h2>产品支持与合作咨询</h2><p>如需产品支持、提出隐私请求或沟通合作，可通过以下方式联系。</p></div>
+        <dl class="contact-list">
+          <div class="contact-item"><dt>开发者名称</dt><dd class="contact-value">AndroidManTou</dd></div>
+          <div class="contact-item"><dt>联系人</dt><dd class="contact-value">吴奎庆</dd></div>
+          <div class="contact-item"><dt>电子邮箱</dt><dd class="contact-value"><a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></dd></div>
+          <div class="contact-item"><dt>联系电话</dt><dd class="contact-value"><a href="tel:+8618538537389">+86 185 3853 7389</a></dd></div>
+          <div class="contact-item"><dt>所在地</dt><dd class="contact-value">中国 · 上海</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container"><span>© <span id="year">2026</span> AndroidManTou</span><div class="footer-links"><a href="https://github.com/wukuiqing49" rel="noopener noreferrer">GitHub</a><a href="mailto:wukuiqing@gmail.com">邮箱</a><a href="#legal">隐私与合规</a></div></div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    function closeMenu() { document.body.classList.remove('menu-open'); menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', '打开导航'); }
+    menuButton.addEventListener('click', () => { const open = document.body.classList.toggle('menu-open'); menuButton.setAttribute('aria-expanded', String(open)); menuButton.setAttribute('aria-label', open ? '关闭导航' : '打开导航'); });
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
+    window.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
