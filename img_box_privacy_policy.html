@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoKit - Legal Documents (Privacy Policy & Account Deletion)</title>
+    <style>
+        :root {
+            --primary: #0066CC;
+            --primary-light: #EBF4FF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #38BDF8;
+                --primary-light: #0C4A6E;
+                --text-main: #F1F5F9;
+                --text-muted: #94A3B8;
+                --bg-body: #0F172A;
+                --bg-card: #1E293B;
+                --border-color: #334155;
+                --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding-bottom: 60px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-badge {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #0066CC, #00C6FF);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .app-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        select.lang-select {
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        select.lang-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 32px auto 0;
+            padding: 0 20px;
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 8px;
+            background-color: var(--border-color);
+            padding: 4px;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background-color: var(--bg-card);
+            color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .doc-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .doc-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p, ul, ol {
+            margin-bottom: 14px;
+            color: var(--text-main);
+            font-size: 0.96rem;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            color: var(--text-main);
+        }
+
+        .contact-card {
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 24px;
+        }
+
+        .contact-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo-area">
+            <div class="logo-badge">PK</div>
+            <div class="app-name">PhotoKit Legal Center</div>
+        </div>
+        <div class="controls">
+            <label for="languageSelect" style="display:none;">Language</label>
+            <select id="languageSelect" class="lang-select" onchange="changeLanguage(this.value)">
+                <option value="en" selected>English (US)</option>
+                <option value="zh-CN">简体中文 (Chinese Simplified)</option>
+                <option value="zh-TW">繁體中文 (Chinese Traditional)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="ja">日本語 (Japanese)</option>
+                <option value="ko">한국어 (Korean)</option>
+                <option value="fr">Français (French)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="pt">Português (Portuguese)</option>
+                <option value="ar">العربية (Arabic)</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+        <button class="tab-btn active" id="tabBtnPrivacy" onclick="switchTab('privacy')">Privacy Policy</button>
+        <button class="tab-btn" id="tabBtnDeletion" onclick="switchTab('deletion')">Account & Data Deletion</button>
+        <button class="tab-btn" id="tabBtnTerms" onclick="switchTab('terms')">Terms of Service</button>
+    </div>
+
+    <!-- Content Card -->
+    <div class="card">
+        <!-- Privacy Policy Tab -->
+        <div id="tabContentPrivacy" class="tab-content active">
+            <h1 class="doc-title" id="privacyTitle">Privacy Policy</h1>
+            <div class="doc-meta" id="privacyMeta">Last Updated: August 24, 2026 | Effective Date: August 24, 2026</div>
+            <div id="privacyBody"></div>
+        </div>
+
+        <!-- Account & Data Deletion Tab -->
+        <div id="tabContentDeletion" class="tab-content">
+            <h1 class="doc-title" id="deletionTitle">Account & Data Deletion Policy</h1>
+            <div class="doc-meta" id="deletionMeta">Last Updated: August 24, 2026 | Compliant with Google Play Data Safety Policy</div>
+            <div id="deletionBody"></div>
+        </div>
+
+        <!-- Terms of Service Tab -->
+        <div id="tabContentTerms" class="tab-content">
+            <h1 class="doc-title" id="termsTitle">Terms of Service</h1>
+            <div class="doc-meta" id="termsMeta">Last Updated: August 24, 2026</div>
+            <div id="termsBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PhotoKit Team. All rights reserved.</p>
+        <p>Developer Contact: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+    </footer>
+</div>
+
+<script>
+    // Multilingual Dictionary
+    const contentData = {
+        "en": {
+            tabPrivacy: "Privacy Policy",
+            tabDeletion: "Account & Data Deletion",
+            tabTerms: "Terms of Service",
+            privacyTitle: "Privacy Policy",
+            privacyMeta: "Last Updated: August 24, 2026 | Effective Date: August 24, 2026",
+            deletionTitle: "Account & Data Deletion Policy",
+            deletionMeta: "Last Updated: August 24, 2026 | Compliant with Google Play Data Safety Policy",
+            termsTitle: "Terms of Service",
+            termsMeta: "Last Updated: August 24, 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 Core Commitment: 100% On-Device Processing</strong><br>
+                    PhotoKit values your privacy above all. All image processing, AI portrait matting, compression, format conversion, and EXIF scrubbing are executed <strong>locally on your device</strong>. We DO NOT upload your personal photos or biometric facial features to any remote servers.
+                </div>
+
+                <h2>1. Information We Collect</h2>
+                <p>PhotoKit is designed as a privacy-first utility application. We minimize data collection:</p>
+                <ul>
+                    <li><strong>Images & Media:</strong> Handled entirely locally. We access images chosen by you solely to perform the requested editing/conversion tasks.</li>
+                    <li><strong>Device & Diagnostic Data:</strong> Non-personally identifiable diagnostic information (such as crash logs and OS version) via Firebase Crashlytics to improve app stability.</li>
+                    <li><strong>In-App Purchases:</strong> Handled securely by Google Play Billing. We only receive anonymous transaction tokens to activate premium features.</li>
+                </ul>
+
+                <h2>2. Device Permissions Usage</h2>
+                <ul>
+                    <li><code>READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE</code>: Used only to select images you wish to process.</li>
+                    <li><code>CAMERA</code>: Used optionally only when you choose to capture a new photo directly inside the ID Photo or Scan tools.</li>
+                    <li><code>POST_NOTIFICATIONS</code>: Used only to inform you when a large batch background task completes.</li>
+                </ul>
+
+                <h2>3. Third-Party Services</h2>
+                <p>We work with trusted industry-standard SDKs that comply with strict privacy policies:</p>
+                <ul>
+                    <li><strong>Google Play In-App Billing:</strong> Processes digital subscriptions securely.</li>
+                    <li><strong>Firebase Crashlytics & Analytics:</strong> Collects aggregated crash logs to maintain software reliability.</li>
+                </ul>
+
+                <h2>4. GDPR & CCPA Compliance</h2>
+                <p>Users in the European Union (GDPR) and California (CCPA) retain full rights to access, delete, or limit the processing of their data. Because your photo data never leaves your device, you have complete physical control over your content at all times.</p>
+
+                <h2>5. Contact Us</h2>
+                <div class="contact-card">
+                    <div class="contact-item"><strong>Developer / Data Protection:</strong> PhotoKit Team</div>
+                    <div class="contact-item"><strong>Email:</strong> <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></div>
+                </div>
+            `,
+            deletionBody: `
+                <div class="highlight-box">
+                    <strong>🛡️ Easy Data Removal & Zero Cloud Footprint</strong><br>
+                    PhotoKit does not require you to register an account with personal credentials to use core features. Your data is stored locally in your device's app storage.
+                </div>
+
+                <h2>1. How to Delete Your Local Data</h2>
+                <p>You can instantly destroy all local caches, temporary photos, and task histories at any time through standard Android settings:</p>
+                <ol>
+                    <li>Open your device <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; <strong>PhotoKit</strong>.</li>
+                    <li>Tap <strong>Storage & Cache</strong>.</li>
+                    <li>Select <strong>Clear Storage</strong> and <strong>Clear Cache</strong>.</li>
+                </ol>
+                <p>All app-generated temporary files, matting masks, and local task logs will be permanently deleted immediately.</p>
+
+                <h2>2. How to Request Cloud/Diagnostic Record Deletion</h2>
+                <p>If you have communicated with us via customer support or wish to delete any anonymous diagnostic identifiers:</p>
+                <ul>
+                    <li>Send an email to: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a> with the subject <em>"Data Deletion Request"</em>.</li>
+                    <li>We will process your request and permanently erase all associated support logs within <strong>48 hours</strong>.</li>
+                </ul>
+
+                <h2>3. Subscription Cancellation</h2>
+                <p>Uninstalling the application does not automatically cancel recurring Google Play subscriptions. To manage or cancel subscriptions, visit the <strong>Google Play Store &gt; Payments & Subscriptions</strong>.</p>
+            `,
+            termsBody: `
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading or using PhotoKit, you agree to comply with and be bound by these Terms of Service. If you do not agree, please do not use the application.</p>
+
+                <h2>2. Intellectual Property & User Content</h2>
+                <p>You retain 100% full ownership and copyright of all images, photos, and documents you process using PhotoKit. PhotoKit claims no rights over your user content.</p>
+
+                <h2>3. Subscriptions & Refunds</h2>
+                <p>Premium features may be offered via monthly, yearly, or lifetime purchases processed through Google Play. Refund requests are subject to Google Play's standard refund policies.</p>
+
+                <h2>4. Disclaimer of Warranty</h2>
+                <p>PhotoKit is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied.</p>
+            `
+        },
+        "zh-CN": {
+            tabPrivacy: "隐私政策",
+            tabDeletion: "账号与数据注销删除",
+            tabTerms: "服务条款",
+            privacyTitle: "隐私政策",
+            privacyMeta: "最后更新日期：2026年8月24日 | 生效日期：2026年8月24日",
+            deletionTitle: "账号与数据注销删除指引",
+            deletionMeta: "最后更新日期：2026年8月24日 | 严格遵循 Google Play 数据安全规范",
+            termsTitle: "用户服务协议",
+            termsMeta: "最后更新日期：2026年8月24日",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 核心承诺：100% 本地端侧处理</strong><br>
+                    PhotoKit 视用户隐私为最高准则。所有的图片编辑、AI 智能人像抠图、深度压缩、格式转换与 EXIF 擦除均在您的<strong>本地设备端独立完成</strong>。我们绝不会将您的原始照片或人脸生物特征上传至任何远程服务器。
+                </div>
+
+                <h2>1. 我们收集的信息</h2>
+                <ul>
+                    <li><strong>图片与媒体文件：</strong> 完全在本地沙盒处理，仅用于执行您主动发起的处理任务。</li>
+                    <li><strong>设备与诊断数据：</strong> 仅通过 Firebase 收集去标识化的匿名崩溃日志，用于排查异常与优化体验。</li>
+                    <li><strong>应用内购买：</strong> 由 Google Play 官方安全计费系统托管，我们仅接收匿名 Token 激活权益。</li>
+                </ul>
+
+                <h2>2. 权限使用说明</h2>
+                <ul>
+                    <li><code>读取图片权限 (READ_MEDIA_IMAGES)</code>：仅在您挑选需要处理的照片时使用。</li>
+                    <li><code>相机权限 (CAMERA)</code>：仅在您使用证件照或扫描拍摄时按需申请。</li>
+                    <li><code>通知权限 (POST_NOTIFICATIONS)</code>：仅用于在后台大批量批处理完成时发送完成提醒。</li>
+                </ul>
+
+                <h2>3. 联系我们</h2>
+                <div class="contact-card">
+                    <div class="contact-item"><strong>开发者团队：</strong> PhotoKit Team</div>
+                    <div class="contact-item"><strong>联系邮箱：</strong> <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></div>
+                </div>
+            `,
+            deletionBody: `
+                <div class="highlight-box">
+                    <strong>🛡️ 便捷数据擦除 · 零云端留存</strong><br>
+                    PhotoKit 无需注册即可使用全部核心基础功能。您的所有数据均保存在本地存储中。
+                </div>
+
+                <h2>1. 如何销毁您的本地数据</h2>
+                <p>您可以随时通过手机系统设置彻底销毁所有本地缓存与历史处理记录：</p>
+                <ol>
+                    <li>进入手机 <strong>设置</strong> &gt; <strong>应用管理</strong> &gt; <strong>PhotoKit</strong>。</li>
+                    <li>点击 <strong>存储占用</strong>。</li>
+                    <li>点击 <strong>清除数据</strong> 与 <strong>清除缓存</strong>。</li>
+                </ol>
+
+                <h2>2. 人工数据删除与注销申请</h2>
+                <p>如需清除任何客服沟通记录或诊断标识：</p>
+                <ul>
+                    <li>发送邮件至：<a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a>，邮件主题注明 <em>“数据删除申请”</em>。</li>
+                    <li>我们将在 <strong>48 小时</strong> 内完成处理并永久清除相关记录。</li>
+                </ul>
+            `,
+            termsBody: `
+                <h2>1. 协议接受</h2>
+                <p>下载或使用 PhotoKit 即代表您完全同意本服务协议。</p>
+                <h2>2. 用户知识产权</h2>
+                <p>您通过 PhotoKit 处理的所有照片、设计与文档的所有权与版权均 100% 归您所有，本应用不主张任何内容权利。</p>
+            `
+        },
+        "zh-TW": {
+            tabPrivacy: "隱私權政策",
+            tabDeletion: "帳號與資料註銷刪除",
+            tabTerms: "服務條款",
+            privacyTitle: "隱私權政策",
+            privacyMeta: "最後更新日期：2026年8月24日",
+            deletionTitle: "帳號與資料註銷刪除指引",
+            deletionMeta: "最後更新日期：2026年8月24日",
+            termsTitle: "使用者服務條款",
+            termsMeta: "最後更新日期：2026年8月24日",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 核心承諾：100% 本地端側處理</strong><br>
+                    PhotoKit 視用戶隱私為最高準則。所有的圖片編輯、AI 智慧人像去背、深度壓縮與格式轉換均在您的<strong>本地裝置端獨立完成</strong>，絕不擅自上傳您的照片至遠端伺服器。
+                </div>
+                <h2>1. 隱私與權限說明</h2>
+                <p>我們僅在執行您所選取的任務時讀取圖片，絕不向第三方出售個人隱私數據。</p>
+                <h2>2. 聯絡方式</h2>
+                <p>客服信箱：<a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>如何刪除本機資料</h2>
+                <p>您可隨時透過 Android 系統設定中點選「清除儲存空間與快取」即可永久銷毀本機記錄。</p>
+            `,
+            termsBody: `
+                <h2>服務條款</h2>
+                <p>使用本軟體即代表您同意遵守本條款，您對所有處理後的圖片擁有 100% 完整版權。</p>
+            `
+        },
+        "es": {
+            tabPrivacy: "Política de Privacidad",
+            tabDeletion: "Eliminación de Cuenta y Datos",
+            tabTerms: "Términos de Servicio",
+            privacyTitle: "Política de Privacidad",
+            privacyMeta: "Última actualización: 24 de agosto de 2026",
+            deletionTitle: "Eliminación de Cuenta y Datos",
+            deletionMeta: "Cumplimiento de Google Play y RGPD",
+            termsTitle: "Términos de Servicio",
+            termsMeta: "Última actualización: 24 de agosto de 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 Procesamiento 100% en el Dispositivo</strong><br>
+                    Todo el procesamiento de imágenes, recorte inteligente por IA y compresión se realiza localmente en su dispositivo. NO subimos sus fotos a ningún servidor.
+                </div>
+                <h2>Contacto</h2>
+                <p>Correo electrónico: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>Cómo eliminar sus datos</h2>
+                <p>Vaya a Ajustes &gt; Aplicaciones &gt; PhotoKit &gt; Almacenamiento y seleccione "Borrar datos". Para solicitudes manuales, escriba a <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a>.</p>
+            `,
+            termsBody: `
+                <h2>Términos</h2>
+                <p>Usted conserva la propiedad y los derechos de autor completos sobre todas las fotos procesadas.</p>
+            `
+        },
+        "ja": {
+            tabPrivacy: "プライバシーポリシー",
+            tabDeletion: "アカウント・データ削除",
+            tabTerms: "利用規約",
+            privacyTitle: "プライバシーポリシー",
+            privacyMeta: "最終更新日：2026年8月24日",
+            deletionTitle: "アカウント・データ削除手順",
+            deletionMeta: "Google Play データセーフティ準拠",
+            termsTitle: "利用規約",
+            termsMeta: "最終更新日：2026年8月24日",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 100% デバイス内処理の保証</strong><br>
+                    PhotoKitのすべての画像処理およびAI切り抜きは、お客様の端末内でローカルに実行されます。写真を外部サーバーに送信することはありません。
+                </div>
+                <h2>お問い合わせ</h2>
+                <p>メール: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>ローカルデータの削除</h2>
+                <p>端末の「設定」&gt;「アプリ」&gt;「PhotoKit」&gt;「ストレージを消去」を選択することで、すべてのローカルデータを即座に削除できます。</p>
+            `,
+            termsBody: `
+                <h2>知的財産権</h2>
+                <p>作成・加工した画像の著作権は100%ユーザーに帰属します。</p>
+            `
+        },
+        "ko": {
+            tabPrivacy: "개인정보 처리방침",
+            tabDeletion: "계정 및 데이터 삭제",
+            tabTerms: "서비스 이용약관",
+            privacyTitle: "개인정보 처리방침",
+            privacyMeta: "최종 수정일: 2026년 8월 24일",
+            deletionTitle: "계정 및 데이터 삭제 안내",
+            deletionMeta: "Google Play 정책 준수",
+            termsTitle: "서비스 이용약관",
+            termsMeta: "최종 수정일: 2026년 8월 24일",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 100% 온디바이스 로컬 처리</strong><br>
+                    모든 이미지 편집 및 AI 누끼 작업은 기기 내부에서 로컬로 처리됩니다. 고객님의 사진은 외부 서버로 전송되지 않습니다.
+                </div>
+                <h2>문의하기</h2>
+                <p>이메일: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>데이터 삭제 방법</h2>
+                <p>설정 &gt; 애플리케이션 &gt; PhotoKit &gt; 저장공간 &gt; '데이터 삭제'를 누르면 모든 로컬 기록이 영구 삭제됩니다.</p>
+            `,
+            termsBody: `
+                <h2>이용 약관</h2>
+                <p>사용자가 편집한 모든 이미지의 저작권은 100% 사용자에게 귀속됩니다.</p>
+            `
+        },
+        "fr": {
+            tabPrivacy: "Politique de Confidentialité",
+            tabDeletion: "Suppression du Compte et des Données",
+            tabTerms: "Conditions d'Utilisation",
+            privacyTitle: "Politique de Confidentialité",
+            privacyMeta: "Dernière mise à jour: 24 août 2026",
+            deletionTitle: "Politique de Suppression des Données",
+            deletionMeta: "Conforme au RGPD et Google Play",
+            termsTitle: "Conditions d'Utilisation",
+            termsMeta: "Dernière mise à jour: 24 août 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 Traitement 100% sur l'appareil</strong><br>
+                    Toutes les opérations d'édition et de détourage IA sont effectuées localement. Aucune photo n'est transférée vers un serveur distant.
+                </div>
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>Suppression des données</h2>
+                <p>Allez dans Paramètres &gt; Applications &gt; PhotoKit &gt; Stockage et appuyez sur « Effacer les données ».</p>
+            `,
+            termsBody: `
+                <h2>Droits</h2>
+                <p>Vous conservez la pleine propriété de vos créations.</p>
+            `
+        },
+        "de": {
+            tabPrivacy: "Datenschutzerklärung",
+            tabDeletion: "Konto- und Datenlöschung",
+            tabTerms: "Nutzungsbedingungen",
+            privacyTitle: "Datenschutzerklärung",
+            privacyMeta: "Zuletzt aktualisiert: 24. August 2026",
+            deletionTitle: "Datenlöschungsrichtlinie",
+            deletionMeta: "DSGVO- und Google Play-konform",
+            termsTitle: "Nutzungsbedingungen",
+            termsMeta: "Zuletzt aktualisiert: 24. August 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 100% Lokale Verarbeitung auf dem Gerät</strong><br>
+                    Alle Bildbearbeitungs- und KI-Freistellungsfunktionen laufen lokal auf Ihrem Smartphone. Ihre Fotos werden niemals auf externe Server hochgeladen.
+                </div>
+                <h2>Kontakt</h2>
+                <p>E-Mail: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>Daten löschen</h2>
+                <p>Öffnen Sie Einstellungen &gt; Apps &gt; PhotoKit &gt; Speicher und wählen Sie « Daten löschen ».</p>
+            `,
+            termsBody: `
+                <h2>Bedingungen</h2>
+                <p>Sie behalten alle Urheberrechte an Ihren bearbeiteten Bildern.</p>
+            `
+        },
+        "pt": {
+            tabPrivacy: "Política de Privacidade",
+            tabDeletion: "Exclusão de Conta e Dados",
+            tabTerms: "Termos de Serviço",
+            privacyTitle: "Política de Privacidade",
+            privacyMeta: "Última atualização: 24 de agosto de 2026",
+            deletionTitle: "Exclusão de Conta e Dados",
+            deletionMeta: "Em conformidade com a Google Play e LGPD",
+            termsTitle: "Termos de Serviço",
+            termsMeta: "Última atualização: 24 de agosto de 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 Processamento 100% no Dispositivo</strong><br>
+                    Todo o processamento de imagens e recorte com IA ocorre localmente. Suas fotos NÃO são enviadas para servidores remotos.
+                </div>
+                <h2>Contato</h2>
+                <p>E-mail: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>Como excluir dados</h2>
+                <p>Acesse Configurações &gt; Aplicativos &gt; PhotoKit &gt; Armazenamento e selecione "Limpar dados".</p>
+            `,
+            termsBody: `
+                <h2>Termos</h2>
+                <p>Você mantém a propriedade total sobre todas as fotos processadas.</p>
+            `
+        },
+        "ar": {
+            tabPrivacy: "سياسة الخصوصية",
+            tabDeletion: "حذف الحساب والبيانات",
+            tabTerms: "شروط الخدمة",
+            privacyTitle: "سياسة الخصوصية",
+            privacyMeta: "آخر تحديث: 24 أغسطس 2026",
+            deletionTitle: "حذف الحساب والبيانات",
+            deletionMeta: "متوافق مع سياسات Google Play",
+            termsTitle: "شروط الخدمة",
+            termsMeta: "آخر تحديث: 24 أغسطس 2026",
+            privacyBody: `
+                <div class="highlight-box">
+                    <strong>🔒 معالجة محلية 100% على الجهاز</strong><br>
+                    تتم جميع عمليات تحرير الصور والذكاء الاصطناعي محليًا على جهازك. نحن لا نقوم برفع صورك إلى أي خوادم خارجية.
+                </div>
+                <h2>اتصل بنا</h2>
+                <p>البريد الإلكتروني: <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a></p>
+            `,
+            deletionBody: `
+                <h2>كيفية حذف بياناتك</h2>
+                <p>انتقل إلى الإعدادات &gt; التطبيقات &gt; PhotoKit &gt; مسح البيانات.</p>
+            `,
+            termsBody: `
+                <h2>الشروط</h2>
+                <p>تحتفظ بالملكية الكاملة وحقوق النشر لجميع صورك.</p>
+            `
+        }
+    };
+
+    function changeLanguage(lang) {
+        const data = contentData[lang] || contentData["en"];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+
+        document.getElementById("tabBtnPrivacy").textContent = data.tabPrivacy;
+        document.getElementById("tabBtnDeletion").textContent = data.tabDeletion;
+        document.getElementById("tabBtnTerms").textContent = data.tabTerms;
+
+        document.getElementById("privacyTitle").textContent = data.privacyTitle;
+        document.getElementById("privacyMeta").textContent = data.privacyMeta;
+        document.getElementById("privacyBody").innerHTML = data.privacyBody;
+
+        document.getElementById("deletionTitle").textContent = data.deletionTitle;
+        document.getElementById("deletionMeta").textContent = data.deletionMeta;
+        document.getElementById("deletionBody").innerHTML = data.deletionBody;
+
+        document.getElementById("termsTitle").textContent = data.termsTitle;
+        document.getElementById("termsMeta").textContent = data.termsMeta;
+        document.getElementById("termsBody").innerHTML = data.termsBody;
+    }
+
+    function switchTab(tabKey) {
+        document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+        if (tabKey === "privacy") {
+            document.getElementById("tabBtnPrivacy").classList.add("active");
+            document.getElementById("tabContentPrivacy").classList.add("active");
+        } else if (tabKey === "deletion") {
+            document.getElementById("tabBtnDeletion").classList.add("active");
+            document.getElementById("tabContentDeletion").classList.add("active");
+        } else if (tabKey === "terms") {
+            document.getElementById("tabBtnTerms").classList.add("active");
+            document.getElementById("tabContentTerms").classList.add("active");
+        }
+    }
+
+    // Auto-detect browser language or default to English
+    window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tabParam = urlParams.get("tab");
+        if (tabParam === "deletion") switchTab("deletion");
+        if (tabParam === "terms") switchTab("terms");
+
+        const userLang = navigator.language || navigator.userLanguage || "en";
+        const matchedLang = Object.keys(contentData).find(k => userLang.toLowerCase().startsWith(k.toLowerCase())) || "en";
+        document.getElementById("languageSelect").value = matchedLang;
+        changeLanguage(matchedLang);
+    });
+</script>
+</body>
+</html>
