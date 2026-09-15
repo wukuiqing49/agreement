@@ -237,8 +237,19 @@
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
             padding: 48px;
+            min-width: 0;
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
+        }
+
+        .content-card table {
+            table-layout: fixed;
+        }
+
+        .content-card th,
+        .content-card td {
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         @media (max-width: 640px) {
@@ -499,8 +510,8 @@
                     <span lang="zh">用户隐私政策</span>
                 </h1>
                 <div class="doc-meta">
-                    <span><strong>Effective Date:</strong> June 24, 2026</span>
-                    <span><strong>App Version:</strong> V1.0.1</span>
+                    <span><strong>Effective Date:</strong> September 15, 2026</span>
+                    <span><strong>App Version:</strong> V1.0.2</span>
                 </div>
             </div>
 
@@ -557,6 +568,12 @@
                             <strong lang="zh">Google SDK 基础信息：</strong>
                             <span lang="zh">当您使用 Google 账号登录、发起应用内购买/订阅或进行广告交互时，集成的 Google SDK 会收集对应的账户标识、Google ID 令牌、购买记录及设备状态标识符。</span>
                         </li>
+                        <li>
+                            <strong lang="en">Minimal Commerce Verification:</strong>
+                            <span lang="en"> When a Pro purchase is made or restored, our DevHub commerce service processes a random app-install identifier, app version, first-enable time, Google Play purchase token, and product type to verify entitlement and prevent purchase abuse. SiteReport disables DevHub device details, locale, analytics, custom events, and advertising identifiers. While account-based entitlement migration remains disabled, SiteReport does not send your Google ID token to DevHub.</span>
+                            <strong lang="zh">最小化商业验单数据：</strong>
+                            <span lang="zh">当您购买或恢复专业版时，我们的 DevHub 商业服务会处理随机应用安装标识、App 版本、首次启用时间、Google Play 购买令牌和商品类型，用于核验权益及防止购买滥用。SiteReport 已关闭 DevHub 的设备详情、地区语言、统计分析、自定义事件及广告标识采集；在账号权益迁移功能关闭期间，也不会向 DevHub 发送您的 Google ID 令牌。</span>
+                        </li>
                     </ul>
                 </section>
 
@@ -577,6 +594,9 @@
                         <li lang="en"><strong>Pro License Billing:</strong> Facilitating in-app purchases (Pro upgrade, no-watermark PDF features) through Google Play Billing.</li>
                         <li lang="zh"><strong>专业版开通：</strong>通过 Google Play 结算框架为用户办理付费订阅、去水印升级及高级功能解锁。</li>
 
+                        <li lang="en"><strong>Purchase Verification:</strong> Verifying Pro purchases, restoring entitlement, reconciling orders, preventing abuse, and handling purchase disputes. Commerce data is not used for advertising or behavioral profiling.</li>
+                        <li lang="zh"><strong>购买校验：</strong>用于核验专业版购买、恢复权益、订单对账、防止滥用及处理购买争议；商业数据不会用于广告或行为画像。</li>
+
                         <li lang="en"><strong>Service Performance Analysis:</strong> Resolving application crashes, performance lags, and diagnosing anonymous usage metrics to improve stability.</li>
                         <li lang="zh"><strong>应用稳定性优化：</strong>收集匿名偶发崩溃日志、卡顿报告，用于诊断并改进核心相机与报告生成的排查机制。</li>
                     </ol>
@@ -596,6 +616,8 @@
                         <li lang="zh">用户的自建服务器配置、专业版购买凭证等敏感配置信息均经过二次安全混淆，保存在受保护的本地存储（MMKV / DataStore）中。</li>
                         <li lang="en">If you choose to uninstall the application, all local databases, custom templates, and inspection items within the sandbox will be permanently deleted. We advise backing up reports (exporting as PDF or uploading to your NAS/SFTP) before deleting the app.</li>
                         <li lang="zh">若您直接卸载应用程序，沙盒内所有未导出的本地巡检记录、自定义模板和数据都将被永久抹除。我们建议您在卸载前将重要的报告打包导出为 PDF，或者同步到您的自建服务器中。</li>
+                        <li lang="en">DevHub commerce requests use HTTPS. Purchase verification records are retained only as needed for entitlement restoration, security, fraud prevention, disputes, and legal obligations. You may request deletion through the contact channel below; records that must be retained for those purposes may be restricted or de-identified instead.</li>
+                        <li lang="zh">DevHub 商业请求通过 HTTPS 传输。购买校验记录仅在恢复权益、安全、防欺诈、争议处理及法定义务所需范围内保留。您可以通过下方联系渠道申请删除；依法或为上述必要目的必须保留的记录，可能改为限制处理或去标识化。</li>
                     </ul>
                 </section>
 
@@ -619,6 +641,11 @@
                                 <td style="padding: 12px;">Google Play Billing</td>
                                 <td style="padding: 12px;"><span lang="en">Processing subscription and one-time Pro purchases</span><span lang="zh">处理专业版买断及订阅的支付服务</span></td>
                                 <td style="padding: 12px;"><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary);">Google Privacy</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--border);">
+                                <td style="padding: 12px;">DevHub Commerce</td>
+                                <td style="padding: 12px;"><span lang="en">Developer-operated purchase verification and entitlement reconciliation; processes only the minimal commerce data described in this policy</span><span lang="zh">由开发者运营的购买校验与权益对账服务，仅处理本政策所述的最小化商业数据</span></td>
+                                <td style="padding: 12px;"><a href="https://devhubcms.pages.dev/sdk-integration" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">SDK Data Practices</a></td>
                             </tr>
                             <tr style="border-bottom: 1px solid var(--border);">
                                 <td style="padding: 12px;">Google Play Services Location</td>
