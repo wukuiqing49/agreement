@@ -1,72 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RoofQuote Data Deletion Policy / RoofQuote 数据删除政策</title>
+  <title>RoofQuote Data Deletion Policy</title>
   <style>
-    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
-    body { max-width: 920px; margin: 0 auto; padding: 24px; color: #1f2937; line-height: 1.65; }
-    h1, h2 { color: #123b63; line-height: 1.25; } h1 { margin-top: 0; }
-    .meta { color: #64748b; } .lang { border-top: 1px solid #dbe4ee; margin-top: 40px; padding-top: 24px; }
-    li { margin: 6px 0; }
+    body { max-width: 900px; margin: 0 auto; padding: 24px; color: #202124; font: 16px/1.65 system-ui, sans-serif; }
+    h1, h2 { line-height: 1.3; } h1 { margin-top: 0; } .meta { color: #5f6368; }
+    .language-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+    .language-switch button { padding: 8px 12px; border: 1px solid #c7cbd1; border-radius: 4px; background: #fff; color: #202124; font: inherit; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { border-color: #176b57; background: #176b57; color: #fff; }
+    [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-  <section lang="en">
-    <h1>RoofQuote Data Deletion Policy</h1>
-    <p class="meta">Effective date: 19 September 2026 &middot; App: RoofQuote</p>
-    <p>RoofQuote is designed around local, offline project storage. This policy explains how to delete information created or stored by the app.</p>
+  <nav class="language-switch" aria-label="Language">
+    <button type="button" data-language="en-US" aria-pressed="true">English</button>
+    <button type="button" data-language="zh-CN" aria-pressed="false">简体中文</button>
+  </nav>
+  <main>
+    <section lang="en-US" data-policy-language="en-US">
+      <h1>RoofQuote Data Deletion Policy</h1>
+      <p class="meta">Effective date: 23 September 2026</p>
+      <p>This policy applies to the RoofQuote Android app and explains how to delete data stored by the app or shared with service providers.</p>
 
-    <h2>1. Delete individual projects</h2>
-    <ol>
-      <li>Open RoofQuote and select the project list.</li>
-      <li>Use the delete action on the project you want to remove and confirm.</li>
-      <li>To remove a single roof section, open the project, use the section delete action, and confirm.</li>
-    </ol>
+      <h2>Delete local RoofQuote data</h2>
+      <p>Delete an individual project or roof section using its delete action in RoofQuote. To remove remaining app data, use Android Settings &gt; Apps &gt; RoofQuote &gt; Storage &gt; Clear storage, or uninstall RoofQuote. Menu labels may vary by Android version.</p>
+      <p>Exported backups, PDFs, Word documents, and spreadsheets are separate files. Delete them from each location where you saved or shared them, including any cloud drive, email, or messaging service. Ask recipients to delete copies they control.</p>
 
-    <h2>2. Delete contractor profile and local app data</h2>
-    <p>Contractor profile fields, material rules and other local preferences are stored on the device. To remove all remaining local RoofQuote data, use Android Settings &gt; Apps &gt; RoofQuote &gt; Storage &gt; Clear storage, or uninstall RoofQuote. The exact labels may differ by Android version.</p>
+      <h2>Google Play purchase records</h2>
+      <p>Clearing app data or uninstalling RoofQuote does not delete Google Play transaction records or cancel a purchase. Manage purchases, refunds, and subscriptions through Google Play.</p>
 
-    <h2>3. Delete exported files</h2>
-    <p>Backup JSON files and proposal PDFs exported or shared by you are outside the app database. Delete them from Downloads, Files, cloud drives, email, messaging apps, or other destinations where you saved or sent them. Ask recipients to delete copies you no longer want them to retain.</p>
+      <h2>DevHub purchase-verification records</h2>
+      <p>Clearing app data or uninstalling RoofQuote does not delete purchase-verification records held by DevHub. The reviewed backend code does not specify automatic expiry or a fixed retention period for purchase records. Contact <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a> to request information or deletion. The developer has not confirmed whether every record can be deleted or the time needed to process a request; records may remain while this is reviewed.</p>
 
-    <h2>4. Google Play purchases</h2>
-    <p>Clearing RoofQuote data does not erase Google Play transaction records or automatically cancel a purchase. Manage purchases, refunds and subscriptions through Google Play. Google handles those records under its own policies.</p>
+      <h2>Crash diagnostics and contact</h2>
+      <p>Crash reports already sent to Firebase Crashlytics are not removed by clearing RoofQuote storage. Contact the developer at the address above for help with a privacy request. Do not include customer or project data unless it is necessary to identify the request.</p>
+      <p>Deletion of local project data may be permanent. Export a backup first only if you need a copy, then delete that copy when it is no longer needed.</p>
+    </section>
 
-    <h2>5. Requests and limitations</h2>
-    <p>Because core RoofQuote project data is stored locally, we normally cannot access or delete it remotely. If you believe information was sent to an optional third-party service, contact that service directly using its account or privacy controls. For help, contact the developer through the support contact shown on the RoofQuote Google Play listing.</p>
+    <section lang="zh-CN" data-policy-language="zh-CN" hidden>
+      <h1>RoofQuote 数据删除政策</h1>
+      <p class="meta">生效日期：2026 年 9 月 23 日</p>
+      <p>本政策适用于 Android 应用 RoofQuote，说明如何删除应用本地保存或分享给服务提供方的数据。</p>
 
-    <h2>6. Before deleting</h2>
-    <p>Deletion may be permanent. Export a backup first only if you need a copy; then delete the backup as described above when it is no longer needed.</p>
-  </section>
+      <h2>删除 RoofQuote 本地资料</h2>
+      <p>在 RoofQuote 中使用项目或屋顶分区对应的删除操作，可删除单个项目或分区。要移除其余应用数据，请进入 Android“设置”&gt;“应用”&gt;“RoofQuote”&gt;“存储”&gt;“清除存储”，或卸载 RoofQuote。菜单名称可能因 Android 版本而异。</p>
+      <p>导出的备份、PDF、Word 文档和电子表格是独立文件。请在每个保存或分享位置分别删除，包括云盘、邮箱或即时通讯服务；如接收方仍持有副本，请联系对方处理。</p>
 
-  <section class="lang" lang="zh-CN">
-    <h1>RoofQuote 数据删除政策</h1>
-    <p class="meta">生效日期：2026 年 9 月 19 日 &middot; 应用：RoofQuote</p>
-    <p>RoofQuote 采用本地离线项目存储。本政策说明如何删除应用创建或保存的信息。</p>
+      <h2>Google Play 购买记录</h2>
+      <p>清除应用数据或卸载 RoofQuote 不会删除 Google Play 交易记录，也不会取消购买。购买、退款和订阅请通过 Google Play 管理。</p>
 
-    <h2>1. 删除单个项目</h2>
-    <ol>
-      <li>打开 RoofQuote，进入项目列表。</li>
-      <li>在需要删除的项目上使用删除操作并确认。</li>
-      <li>如需删除单个屋顶分块，进入项目后使用该分块的删除操作并确认。</li>
-    </ol>
+      <h2>DevHub 购买验证记录</h2>
+      <p>清除应用数据或卸载 RoofQuote 不会删除 DevHub 保存的购买验证记录。已检查的后端代码没有规定购买记录的自动过期或固定保存期限。您可以通过 <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a> 咨询或提出删除请求。开发者尚未确认所有记录是否均可删除或请求处理时限；核实期间记录可能继续保留。</p>
 
-    <h2>2. 删除承包商资料和本地应用数据</h2>
-    <p>承包商资料、材料规则和其他本地偏好保存在设备上。要删除 RoofQuote 剩余的本地数据，请进入 Android“设置”&gt;“应用”&gt;“RoofQuote”&gt;“存储”&gt;“清除存储”，或卸载 RoofQuote。不同 Android 版本的名称可能略有不同。</p>
+      <h2>崩溃诊断与联系</h2>
+      <p>已发送到 Firebase Crashlytics 的崩溃报告不会因清除 RoofQuote 存储空间而删除。如需隐私请求协助，请通过上述邮箱联系开发者。除非识别请求确有必要，请勿附上客户或项目资料。</p>
+      <p>删除本地项目资料可能无法恢复。仅在需要留存副本时先导出备份，并在不再需要时删除该副本。</p>
+    </section>
 
-    <h2>3. 删除已导出的文件</h2>
-    <p>导出的 JSON 备份和报价 PDF 不属于应用数据库。请在下载目录、文件管理器、云盘、邮箱、即时通讯应用或其他保存/发送位置删除它们；如已发送给他人，请联系接收方删除不再需要的副本。</p>
-
-    <h2>4. Google Play 购买记录</h2>
-    <p>清除 RoofQuote 数据不会删除 Google Play 的交易记录，也不会自动取消购买。购买、退款和订阅请通过 Google Play 管理，相关记录由 Google 按其政策处理。</p>
-
-    <h2>5. 请求与限制</h2>
-    <p>由于 RoofQuote 的核心项目数据保存在本地，我们通常无法远程访问或删除这些数据。如果您认为信息已发送给可选的第三方服务，请直接使用该服务的账号或隐私控制功能处理。如需帮助，请通过 RoofQuote Google Play 页面展示的开发者支持联系方式联系。</p>
-
-    <h2>6. 删除前提示</h2>
-    <p>删除可能无法恢复。如需保留副本，请先导出备份；不再需要时，也应按照上述说明删除该备份。</p>
-  </section>
+  </main>
+  <script>
+    const titles = { "en-US": "RoofQuote Data Deletion Policy", "zh-CN": "RoofQuote 数据删除政策" };
+    const languageButtons = document.querySelectorAll("[data-language]");
+    const policySections = document.querySelectorAll("[data-policy-language]");
+    languageButtons.forEach((button) => button.addEventListener("click", () => {
+      const language = button.dataset.language;
+      document.documentElement.lang = language;
+      document.title = titles[language];
+      policySections.forEach((section) => { section.hidden = section.dataset.policyLanguage !== language; });
+      languageButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    }));
+  </script>
 </body>
 </html>

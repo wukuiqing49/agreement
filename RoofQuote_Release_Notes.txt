@@ -1,0 +1,9 @@
+en-US
+Added support for purchase verification. Pro access continues to be determined by Google Play.
+
+Your projects, customer details, and roof measurements remain stored on your device. Cloud sync is not available.
+
+简体中文
+新增购买验证支持。Pro 权益仍以 Google Play 的查询结果为准。
+
+项目、客户资料和屋面测量数据仍保存在您的设备上，当前不提供云同步。

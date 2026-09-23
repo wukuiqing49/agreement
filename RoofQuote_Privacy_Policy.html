@@ -1,88 +1,82 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RoofQuote Privacy Policy / RoofQuote 隐私政策</title>
+  <title>RoofQuote Privacy Policy</title>
   <style>
-    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
-    body { max-width: 920px; margin: 0 auto; padding: 24px; color: #1f2937; line-height: 1.65; }
-    h1, h2 { color: #123b63; line-height: 1.25; } h1 { margin-top: 0; }
-    .meta { color: #64748b; } .lang { border-top: 1px solid #dbe4ee; margin-top: 40px; padding-top: 24px; }
-    li { margin: 6px 0; } code { background: #f1f5f9; padding: 2px 4px; }
+    body { max-width: 900px; margin: 0 auto; padding: 24px; color: #202124; font: 16px/1.65 system-ui, sans-serif; }
+    h1, h2 { line-height: 1.3; } h1 { margin-top: 0; } .meta { color: #5f6368; }
+    .language-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+    .language-switch button { padding: 8px 12px; border: 1px solid #c7cbd1; border-radius: 4px; background: #fff; color: #202124; font: inherit; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { border-color: #176b57; background: #176b57; color: #fff; }
+    [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-  <section lang="en">
-    <h1>RoofQuote Privacy Policy</h1>
-    <p class="meta">Effective date: 19 September 2026 &middot; App: RoofQuote</p>
-    <p>RoofQuote is an offline roofing measurement, material takeoff, estimating and PDF proposal application for individual roofers and small roofing contractors. This policy explains what information the app handles and how it is used.</p>
+  <nav class="language-switch" aria-label="Language">
+    <button type="button" data-language="en-US" aria-pressed="true">English</button>
+    <button type="button" data-language="zh-CN" aria-pressed="false">简体中文</button>
+  </nav>
+  <main>
+    <section lang="en-US" data-policy-language="en-US">
+      <h1>RoofQuote Privacy Policy</h1>
+      <p class="meta">Effective date: 23 September 2026</p>
+      <p>This policy applies to the RoofQuote Android app.</p>
+      <p>RoofQuote stores projects, customer details, roof measurements, estimates, contractor details, and preferences on your device. These project and measurement records are not uploaded to RoofQuote or DevHub servers. If you export or share a file, it is sent only to the destination you choose; that service's terms then apply.</p>
 
-    <h2>1. Information you enter</h2>
-    <p>You may enter project names, customer names, property addresses, phone numbers, roof measurements, material prices, contractor profile details, notes and proposal terms. This information is used only to calculate estimates, save projects locally, and generate or share proposal PDFs.</p>
+      <h2>Google Play purchases and DevHub verification</h2>
+      <p>Google Play processes checkout and payment information for optional Pro purchases. RoofQuote does not receive your card number. When RoofQuote checks a purchase returned by Google Play, it sends the purchase token and product type (subscription or one-time product) to DevHub, a service operated by the app developer, for purchase verification. The request can also include a random app-install identifier, the app version, and the app's first-open date. DevHub's network infrastructure also receives ordinary connection data such as your IP address.</p>
+      <p>DevHub checks the purchase with Google Play and may retain a purchase record containing the token in encrypted form, a token hash, product and order details, purchase status, and verification timestamps, associated with the app installation. DevHub verification does not grant Pro access. RoofQuote determines Pro access from the purchase and entitlement information returned by Google Play.</p>
+      <p>Google sign-in identity is not linked to DevHub in the current app configuration. RoofQuote does not send a Google ID token, name, or email to DevHub for purchase-account association. DevHub behavioral analytics, custom event collection, device details, and locale/region collection are disabled.</p>
 
-    <h2>2. Storage and sharing</h2>
-    <ul>
-      <li>Project and contractor information is stored locally on your device using the app database and local preferences.</li>
-      <li>RoofQuote does not require a RoofQuote cloud account or a RoofQuote server for its core workflow.</li>
-      <li>When you export a backup or PDF, the file is created on your device. When you choose to share it, Android sends it to the app or service you select. That recipient's privacy policy then applies.</li>
-      <li>Unencrypted network traffic is disabled by the app. Optional third-party services may still communicate with their own services as described below.</li>
-    </ul>
+      <h2>Other service providers</h2>
+      <p>The app includes Firebase Crashlytics for crash diagnostics. Automatic crash reporting is enabled by the current app configuration; Google may receive crash and diagnostic information under Google's terms. No advertising SDK or Firebase Analytics collection is enabled in the current app configuration.</p>
 
-    <h2>3. Google services and purchases</h2>
-    <p>RoofQuote includes Google Play Billing for optional Pro purchases. Google Play may process purchase, payment and entitlement information under Google's policies. RoofQuote does not receive your payment card number.</p>
-    <p>RoofQuote includes Firebase Analytics and the current application contains a Firebase configuration. Analytics collection is enabled by the app configuration unless the user or a future build disables it. Firebase may process device, app-use and diagnostic information under Google's policies. Google advertising integration is included but disabled in the current application configuration. Review the Google privacy disclosures shown in Google Play for the version you install.</p>
+      <h2>Retention, deletion, and choices</h2>
+      <p>Local project data remains until you delete it, clear RoofQuote storage, or uninstall the app. Exported files must be deleted separately from each place where you saved or shared them. Google Play retains its transaction records under Google's policies. Clearing app data or uninstalling does not delete DevHub purchase records. The reviewed DevHub backend code does not define an automatic deletion period for purchase records; the developer has not confirmed a fixed retention period or a user-request deletion timeline. Contact <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a> to ask about a DevHub data request.</p>
+      <p>There is currently no in-app control to turn off DevHub purchase verification separately. You can choose not to make a Pro purchase. If you make a purchase, verification is initiated when RoofQuote checks a purchase reported by Google Play. Manage or cancel subscriptions through Google Play; cancellation does not itself erase Google's transaction records or any DevHub record.</p>
+      <p>To delete local data, use the project's delete action or Android Settings. See <a href="RoofQuote_Data_Deletion_Policy.html">RoofQuote Data Deletion Policy</a>.</p>
 
-    <h2>4. Permissions</h2>
-    <p>The app requests network access for Google Play and optional Google services. It does not use satellite imagery or require a server for roof calculations. Files shared outside the app use Android's temporary, permission-scoped content URIs.</p>
+      <h2>Children and changes</h2>
+      <p>RoofQuote is a professional estimating app and is not directed to children. We may update this policy when the app or its data practices change.</p>
+    </section>
 
-    <h2>5. Retention and deletion</h2>
-    <p>Local project data remains on the device until you delete it, clear the app's storage, uninstall the app, or replace it through a restore/import action. Exported backups and PDFs are separate files and must be deleted from the location where you saved or shared them. See <a href="RoofQuote_Data_Deletion_Policy.html">RoofQuote Data Deletion Policy</a> for steps.</p>
+    <section lang="zh-CN" data-policy-language="zh-CN" hidden>
+      <h1>RoofQuote 隐私政策</h1>
+      <p class="meta">生效日期：2026 年 9 月 23 日</p>
+      <p>本政策适用于 Android 应用 RoofQuote。</p>
+      <p>RoofQuote 将项目、客户资料、屋顶测量、报价、承包商资料和偏好设置保存在您的设备上。这些项目和测量资料不会上传到 RoofQuote 或 DevHub 服务器。您导出或分享文件时，文件只会发送到您选择的目标位置；该服务的条款届时适用。</p>
 
-    <h2>6. Children</h2>
-    <p>RoofQuote is a professional estimating tool and is not directed to children. We do not knowingly request personal information from children.</p>
+      <h2>Google Play 购买与 DevHub 验证</h2>
+      <p>可选 Pro 购买的结账和付款信息由 Google Play 处理，RoofQuote 不会获得您的银行卡号。当 RoofQuote 检查 Google Play 返回的购买时，应用会将购买令牌和商品类型（订阅或一次性商品）发送给由应用开发者运营的 DevHub 服务进行购买验证。请求还可能包含随机应用安装标识、应用版本和应用首次打开日期。DevHub 网络基础设施也会接收 IP 地址等常规连接信息。</p>
+      <p>DevHub 会向 Google Play 核验购买，并可能保存与应用安装关联的购买记录，包括加密形式的购买令牌、令牌哈希、商品及订单详情、购买状态和校验时间。DevHub 验单不会授予 Pro 权益；RoofQuote 根据 Google Play 返回的购买和权益信息判断 Pro 状态。</p>
+      <p>当前应用配置未启用 Google 登录身份与 DevHub 的关联。RoofQuote 不会为购买账号关联向 DevHub 发送 Google ID 令牌、姓名或邮箱。DevHub 行为统计、自定义事件、设备详情及地区/语言采集均已关闭。</p>
 
-    <h2>7. Changes and contact</h2>
-    <p>We may update this policy when app functionality or legal requirements change. The effective date above will be updated with each revision. For privacy questions or requests, contact the developer through the support contact shown on the RoofQuote Google Play listing and include the app version and device details without sending customer data unless necessary.</p>
+      <h2>其他服务提供方</h2>
+      <p>应用包含 Firebase Crashlytics，用于崩溃诊断。根据当前应用配置，自动崩溃报告处于启用状态；Google 可能依其条款接收崩溃及诊断信息。当前应用配置未启用广告 SDK 或 Firebase Analytics 数据收集。</p>
 
-    <h2>8. Your choices</h2>
-    <p>You control the information entered into RoofQuote, whether to export or share files, and whether to use optional purchase or third-party features. You can stop local processing by deleting the relevant projects or clearing the app data.</p>
-  </section>
+      <h2>保存、删除与您的选择</h2>
+      <p>本地项目资料会保留至您删除项目、清除 RoofQuote 存储空间或卸载应用。导出的文件需在每个保存或分享位置另行删除。Google Play 按其政策保存交易记录。清除应用数据或卸载应用不会删除 DevHub 购买记录。已检查的 DevHub 后端代码没有为购买记录规定自动删除期限；开发者尚未确认固定保存期限或用户删除请求的处理时限。如需咨询 DevHub 数据请求，请联系 <a href="mailto:wukuiqing@gmail.com">wukuiqing@gmail.com</a>。</p>
+      <p>当前应用没有单独关闭 DevHub 购买验证的应用内选项。您可以选择不进行 Pro 购买；如已购买，当 RoofQuote 检查 Google Play 返回的购买时会启动验证。订阅管理或取消请通过 Google Play 进行；取消订阅本身不会删除 Google 的交易记录或 DevHub 记录。</p>
+      <p>如需删除本地资料，请使用项目删除操作或 Android 系统设置。步骤请参阅 <a href="RoofQuote_Data_Deletion_Policy.html">RoofQuote 数据删除政策</a>。</p>
 
-  <section class="lang" lang="zh-CN">
-    <h1>RoofQuote 隐私政策</h1>
-    <p class="meta">生效日期：2026 年 9 月 19 日 &middot; 应用：RoofQuote</p>
-    <p>RoofQuote 是面向个体 Roofer 和小型 Roofing Contractor 的离线屋顶测量、材料算量、报价及 PDF 报价单工具。本政策说明应用会处理哪些信息以及如何使用这些信息。</p>
+      <h2>儿童与政策变更</h2>
+      <p>RoofQuote 是专业报价应用，不面向儿童。应用或数据处理方式发生变化时，我们可能更新本政策。</p>
+    </section>
 
-    <h2>1. 您主动输入的信息</h2>
-    <p>您可以输入项目名称、客户姓名、施工地址、电话号码、屋顶尺寸、材料价格、承包商资料、备注和报价条款。这些信息仅用于计算估算、在本地保存项目，以及生成或分享报价 PDF。</p>
-
-    <h2>2. 存储与分享</h2>
-    <ul>
-      <li>项目资料和承包商资料通过本地数据库及本地偏好设置保存在您的设备上。</li>
-      <li>RoofQuote 的核心流程不要求 RoofQuote 云账号，也不依赖 RoofQuote 自有服务器。</li>
-      <li>导出备份或 PDF 时，文件先在设备本地生成；您主动分享后，Android 会将文件交给您选择的应用或服务，接收方的隐私政策将适用。</li>
-      <li>应用默认禁止明文网络流量；可选的第三方服务仍可能按其自身规则与其服务器通信。</li>
-    </ul>
-
-    <h2>3. Google 服务与购买</h2>
-    <p>RoofQuote 集成 Google Play Billing，用于可选的 Pro 购买。Google Play 可能依据其政策处理购买、支付和权益信息；RoofQuote 不会获得您的银行卡号。</p>
-    <p>RoofQuote 集成 Firebase Analytics，当前应用也包含 Firebase 配置。除非用户或后续版本关闭，应用配置默认启用 Analytics 数据收集。Firebase 可能依据 Google 政策处理设备、应用使用和诊断信息。Google 广告集成已包含在项目中，但当前应用配置默认关闭广告。请同时查看 Google Play 中对应版本展示的 Google 隐私说明。</p>
-
-    <h2>4. 权限</h2>
-    <p>应用使用网络权限支持 Google Play 和可选的 Google 服务。应用不使用卫星影像，也不要求服务器完成屋顶计算。对外分享的文件使用 Android 临时且受权限限制的 content URI。</p>
-
-    <h2>5. 保存期限与删除</h2>
-    <p>本地项目数据会一直保留，直到您删除项目、清除应用存储、卸载应用，或通过恢复/导入操作替换数据。已导出的备份和 PDF 是独立文件，必须在保存或分享它们的位置单独删除。具体步骤请参阅<a href="RoofQuote_Data_Deletion_Policy.html">RoofQuote 数据删除政策</a>。</p>
-
-    <h2>6. 儿童隐私</h2>
-    <p>RoofQuote 是专业报价工具，不面向儿童。我们不会故意要求儿童提供个人信息。</p>
-
-    <h2>7. 政策变更与联系</h2>
-    <p>当应用功能或法律要求发生变化时，我们可能更新本政策。每次修订都会更新上方生效日期。如有隐私问题或删除请求，请通过 RoofQuote Google Play 页面展示的开发者支持联系方式联系，并尽量只提供应用版本和设备信息，除非确有必要，不要发送客户资料。</p>
-
-    <h2>8. 您的选择</h2>
-    <p>您可以控制输入 RoofQuote 的信息、是否导出或分享文件，以及是否使用可选的购买或第三方功能。删除相关项目或清除应用数据即可停止本地处理。</p>
-  </section>
+  </main>
+  <script>
+    const titles = { "en-US": "RoofQuote Privacy Policy", "zh-CN": "RoofQuote 隐私政策" };
+    const languageButtons = document.querySelectorAll("[data-language]");
+    const policySections = document.querySelectorAll("[data-policy-language]");
+    languageButtons.forEach((button) => button.addEventListener("click", () => {
+      const language = button.dataset.language;
+      document.documentElement.lang = language;
+      document.title = titles[language];
+      policySections.forEach((section) => { section.hidden = section.dataset.policyLanguage !== language; });
+      languageButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    }));
+  </script>
 </body>
 </html>
