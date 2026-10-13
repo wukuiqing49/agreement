@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NASFileManager — Account & data deletion</title><style>*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#1c2b3e;font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:900px;margin:auto;padding:36px 22px 64px}header{border-bottom:1px solid #d9e2ee;padding-bottom:22px}.brand{color:#1765c1;font-weight:700;letter-spacing:.03em}.tools,nav{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}button,a{touch-action:manipulation}button{font:inherit;border:1px solid #b6c9df;border-radius:9px;padding:9px 16px;background:white;color:#1559a6;cursor:pointer}button[aria-pressed=true]{background:#1765c1;color:white;border-color:#1765c1}button:focus-visible,a:focus-visible{outline:3px solid #e59b1d;outline-offset:4px}h1{font-size:clamp(26px,5vw,36px);line-height:1.25}h2{font-size:21px;line-height:1.4;margin:30px 0 8px}p{margin:8px 0;overflow-wrap:anywhere}.notice{background:#fff6df;border-left:4px solid #c78a16;padding:14px 18px;border-radius:6px;margin:22px 0}article{background:white;padding:10px 26px 28px;border:1px solid #dfe7f1;border-radius:12px}a{color:#145db3}footer{font-size:14px;color:#52657b;margin-top:26px}[hidden]{display:none!important}@media(max-width:480px){main{padding:22px 14px}article{padding:8px 18px 22px}}@media print{body{background:white}button,nav{display:none}main{padding:0}article{border:0}a{color:inherit}}</style></head><body><main><header><div class="brand">NASFileManager</div><div class="tools" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></header>
+<div data-language="en" lang="en">
+<p class="notice">Draft · Updated 13 October 2026. Developer contact and server retention details are pending.</p>
+
+
+<article data-document="deletion"><h1>Account &amp; data deletion</h1>
+<section><h2>What you can remove</h2><p>NASFileManager currently keeps an optional Google profile on this device and does not create a separate developer-hosted account. There is no server-account deletion button or online deletion form in the current app. The steps below explain the available removal controls. Signing out is not the same as deleting all data or deleting your Google account.</p></section>
+<section><h2>1. Remove the local Google profile</h2><p>Open NASFileManager → Me → Google account → Sign out, then confirm. The app removes the locally saved name and email and attempts to clear the system sign-in state. If system cleanup fails, the app reports that local sign-out completed but system cleanup did not. NAS connections, files and Play purchase rights are not removed by this action.</p></section>
+<section><h2>2. Revoke Google authorization if needed</h2><p>Visit your Google Account third-party connections page, select the connection corresponding to this app, and use the removal controls offered by Google. This is separate from local sign-out. It does not delete your Google account or data held by your NAS.</p></section>
+<section><h2>3. Remove app-local data</h2><p>First stop or cancel active transfers and scheduled sync plans. Export any app-private files you want to keep. You can remove connections and eligible history individually in the app. To remove all app-private information, open Android Settings → Apps → NASFileManager → Storage → Clear storage / Clear data (wording varies by device). This removes local profiles, settings, credentials, databases, caches and app-private files. The app cannot remotely clear data on another device; repeat the steps on each device.</p></section>
+<section><h2>4. Data that remains elsewhere</h2><p>These steps do not remove NAS files, external-storage files, exported reports, shared copies, recovery copies or records retained by Google Play. Manage those items with the relevant storage location or provider. Deleting local data does not revoke a paid entitlement or refund a purchase. Google and NAS administrators apply their own retention rules.</p></section>
+<section><h2>5. Optional statistics and deletion requests</h2><p>Disable online services and activity statistics from the app’s privacy/data explanation page to stop future collection. Signing out, clearing storage or uninstalling does not itself delete DevHub server history. A verified contact for server-held data requests, a way to identify the relevant installation and the retention/deletion schedule still need to be provided before this page can serve as a public deletion-request channel. This static HTML page does not send a deletion request. Never send NAS passwords, Google passwords or purchase tokens through an unverified channel.</p></section>
+</article>
+<footer>Related resources: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://myaccount.google.com/connections">Google account connections</a></footer></div>
+<div data-language="zh" lang="zh-CN" hidden>
+<p class="notice">草稿 · 更新于 2026 年 10 月 13 日。开发者联系方式与服务器保留细则待补齐。</p>
+
+
+<article data-document="deletion"><h1>账户注销与数据删除</h1>
+<section><h2>可以删除哪些内容</h2><p>NASFileManager 当前仅在本机保存可选的 Google 资料，不创建独立的开发者服务器账户。当前应用没有服务器账户注销按钮或在线注销表单。以下步骤说明现有的移除方式。退出登录不等于删除全部数据，也不等于注销 Google 账户。</p></section>
+<section><h2>1. 移除本机 Google 资料</h2><p>打开 NASFileManager → 我的 → Google 账号 → 退出登录，然后确认。应用会移除本机保存的名称和邮箱，并尝试清理系统登录状态。若系统清理失败，应用会提示本机已退出但系统清理未完成。此操作不会移除 NAS 连接、文件或 Play 购买权益。</p></section>
+<section><h2>2. 如有需要，撤销 Google 授权</h2><p>访问 Google 账户的第三方连接页面，选择对应本应用的连接，使用 Google 提供的移除功能。这与本机退出登录是独立操作，不会删除 Google 账户或 NAS 上的数据。</p></section>
+<section><h2>3. 删除应用本地数据</h2><p>先停止或取消正在运行的传输与定时同步计划，导出需要保留的应用私有文件。您可以在应用中逐项移除连接及可清理的历史。如需删除全部应用私有信息，打开 Android 设置 → 应用 → NASFileManager → 存储 → 清除存储空间/清除数据（名称因设备而异）。这会移除本机资料、设置、凭据、数据库、缓存及应用私有文件。应用无法远程清除其他设备上的数据，请在各设备分别操作。</p></section>
+<section><h2>4. 仍保留在其他位置的数据</h2><p>上述步骤不会移除 NAS 文件、外部存储文件、导出报告、已分享副本、恢复副本或 Google Play 保留的记录。请在相应存储位置或服务商处管理这些数据。删除本地数据不会撤销已购买权益，也不会退款。Google 及 NAS 管理方有各自的数据保留规则。</p></section>
+<section><h2>5. 可选统计与删除请求</h2><p>在应用隐私/数据说明页关闭在线服务和活跃统计，可停止后续采集。退出登录、清除存储空间或卸载本身不会删除 DevHub 服务器历史。公开作为删除申请渠道前，仍需补齐可信的申请联系方式、相关安装记录的识别方式和保留/删除周期。此静态 HTML 页面不会提交删除请求。请勿通过未经核实的渠道发送 NAS 密码、Google 密码或购买令牌。</p></section>
+</article>
+<footer>相关资源：<a href="https://policies.google.com/privacy">Google 隐私政策</a> · <a href="https://myaccount.google.com/connections">Google 账户连接</a></footer></div>
+<noscript><p>JavaScript is disabled. Both languages are shown below. / JavaScript 已禁用，以下显示双语内容。</p><style>[hidden]{display:block!important}.tools,nav{display:none}</style></noscript></main><script>
+(() => {
+ let language = 'en';
+ const page = 'deletion';
+ function render() {
+  document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+  document.querySelectorAll('[data-language]').forEach(e => e.hidden = e.dataset.language !== language);
+  document.querySelectorAll('[data-document]').forEach(e => e.hidden = e.dataset.document !== page);
+  document.querySelectorAll('[data-lang]').forEach(e => e.setAttribute('aria-pressed', String(e.dataset.lang === language)));
+   document.title = 'NASFileManager — ' + (language === 'en' ? (page === 'privacy' ? 'Privacy notice' : 'Account & data deletion') : (page === 'privacy' ? '隐私说明' : '账户注销与数据删除'));
+ }
+ document.querySelectorAll('[data-lang]').forEach(e => e.addEventListener('click', () => { language = e.dataset.lang; render(); }));
+ render();
+})();
+</script></body></html>
