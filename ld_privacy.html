@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LensDock</title>
+    <style>
+        :root {
+            --bg-color: #F8F9F6;
+            --surface-color: #FFFFFF;
+            --card-border: #DFE4DC;
+            --text-primary: #1C241E;
+            --text-secondary: #5C675E;
+            --accent-green: #326749;
+            --accent-soft: #E8F0E7;
+            --tag-bg: #EDF2EA;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121A15;
+                --surface-color: #1A241E;
+                --card-border: #2C3830;
+                --text-primary: #EDF2EA;
+                --text-secondary: #9DA99F;
+                --accent-green: #B7D5B8;
+                --accent-soft: #24352A;
+                --tag-bg: #222E26;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.68;
+            padding: 32px 16px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--surface-color);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+        }
+        .header {
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .nav-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .nav-switch a {
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--accent-green);
+            background: var(--tag-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            transition: all 0.2s ease;
+        }
+        .nav-switch a:hover {
+            background: var(--accent-soft);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .meta {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 32px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 20px 0 8px;
+        }
+        p, ul, ol {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            color: var(--text-primary);
+        }
+        .notice-box {
+            background: var(--tag-bg);
+            border-left: 4px solid var(--accent-green);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px 16px;
+            border: 1px solid var(--card-border);
+        }
+        th {
+            background: var(--tag-bg);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        td {
+            color: var(--text-secondary);
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav-switch">
+                <a href="#zh" onclick="switchLang('zh')">简体中文</a>
+                <a href="cancellation.html">Account Cancellation Agreement →</a>
+            </div>
+            <h1 id="page-title">Privacy Policy</h1>
+            <div class="meta" id="page-meta">
+                Effective Date: November 2, 2026 &nbsp;|&nbsp; Application: LensDock
+            </div>
+        </div>
+
+        <!-- ENGLISH VERSION (DEFAULT) -->
+        <div id="content-en">
+            <div class="notice-box">
+                <strong>Local-First Core Principle:</strong> LensDock operates primarily as an offline desktop and tethered companion. Core functions—including camera connectivity, shutter release, parameter tuning, and photo review—require <strong>no account registration</strong> and perform <strong>no stealth cloud uploads</strong>.
+            </div>
+
+            <h2>1. Overview & Information We Process</h2>
+            <p>LensDock is engineered for photographers who demand control over their creative workflow. Because we follow a local-first design:</p>
+            <ul>
+                <li><strong>No Mandatory Profile or Sign-in:</strong> You are not required to provide personal identity credentials (name, phone number, email) to control your camera or review photos.</li>
+                <li><strong>Photos & Media Files:</strong> Photos transferred from your camera or chosen from your Android device stay strictly within your private device storage or user-selected folders. We never upload your raw files or photographs to centralized servers.</li>
+                <li><strong>User-Configured Storage:</strong> Network transfers occur solely upon your explicit instruction (e.g., syncing originals to your personal local NAS or sending photos via local Wi-Fi).</li>
+            </ul>
+
+            <h2>2. Camera Manufacturer Disclosures (Canon, Nikon, Sony)</h2>
+            <p>LensDock communicates with external hardware cameras via industry-standard protocols. Please review the following specific brand notices:</p>
+            
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Brand</th>
+                            <th>Supported Protocols</th>
+                            <th>Communication & Data Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Canon®</strong></td>
+                            <td>USB Host (PTP / Vendor Extensions), CCAPI (Wi-Fi)</td>
+                            <td>Reads exposure values (Tv, Av, ISO), battery, card capacity, live view stream. LensDock strictly respects official communication limits and does NOT alter camera firmware or internal EEPROM calibration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nikon®</strong></td>
+                            <td>USB / PTP, PTP/IP</td>
+                            <td>Decodes Nikon NEF/NRW raw structures and embedded MakerNotes (exposure metadata, lens information). Shutter release and exposure controls obey hardware physical limits without unofficial command injection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sony®</strong></td>
+                            <td>USB PTP (PC Remote / MTP), Wi-Fi Remote</td>
+                            <td>Interacts with Sony Alpha raw files (.ARW) and embedded previews. Metadata extraction operates in a sandboxed parser without altering original raw digital negatives.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Trademark Disclaimer:</strong> Canon®, Nikon®, and Sony® are trademarks of Canon Inc., Nikon Corporation, and Sony Group Corporation respectively. <strong>LensDock is developed independently by third-party developers and is NOT an official app of, endorsed by, or affiliated with Canon, Nikon, or Sony.</strong></p>
+
+            <h2>3. Third-Party & Open Source Libraries</h2>
+            <p>To provide high-fidelity offline decoding and metadata management, LensDock incorporates reputable open-source engines under compliant licensing terms:</p>
+            <ul>
+                <li><strong>ExifTool & Embedded Perl Engine:</strong> (Perl Artistic License / GNU GPL) Provides professional EXIF, IPTC, and XMP metadata parsing and sidecar (.xmp) file operations entirely within an isolated local Android sandbox.</li>
+                <li><strong>LibRaw:</strong> (CDDL-1.0 / GNU LGPL-2.1) Extracts high-resolution embedded previews and thumbnails from Canon CR2/CR3, Nikon NEF, and Sony ARW files for rapid mobile culling.</li>
+                <li><strong>NanoHTTPD:</strong> (Modified BSD License) Embedded lightweight local HTTP service used exclusively for point-to-point transfers and local network sharing inside user-authorized Wi-Fi networks. It does not open public Internet listening ports.</li>
+                <li><strong>MMKV:</strong> (Apache License 2.0 by Tencent) High-performance key-value local storage for camera parameter presets and user UI preferences.</li>
+                <li><strong>AndroidX Jetpack & Material Components:</strong> (Apache License 2.0 by Google) Foundational UI scaffolding, system insets management, and Lifecycle architecture.</li>
+            </ul>
+
+            <h2>4. Permissions & Purpose Justification</h2>
+            <ul>
+                <li><strong>INTERNET:</strong> Required strictly for local network communication with wireless cameras (CCAPI, PTP-IP), personal NAS sync, and Google Play In-App Purchase license verification.</li>
+                <li><strong>ACCESS_NETWORK_STATE & ACCESS_WIFI_STATE:</strong> Verifies Wi-Fi state prior to initiating camera discovery to protect against unintended cellular data usage.</li>
+                <li><strong>USB Host Permission:</strong> Prompted by Android when a camera is plugged in via OTG cable; access is scoped only to the connected camera device session.</li>
+                <li><strong>Scoped Storage (SAF):</strong> LensDock uses Android's Storage Access Framework document picker. We never request broad <code>MANAGE_EXTERNAL_STORAGE</code> permissions.</li>
+            </ul>
+
+            <h2>5. Data Retention, Rights & Contact</h2>
+            <p>All local database records and project presets can be cleared instantly in the app settings or by uninstalling the application. Photos in your phone gallery and camera memory card will never be modified or deleted without explicit command.</p>
+            <p>For questions regarding this policy, contact: <strong>support@lensdock.app</strong></p>
+        </div>
+
+        <!-- CHINESE VERSION -->
+        <div id="content-zh" style="display:none;">
+            <div class="notice-box">
+                <strong>本地优先核心原则：</strong> LensDock 作为摄影师的随身工作台，核心能力（包括相机连接、快门控制、参数设置与原片选片）均完全在本地运行，<strong>无需注册账号</strong>，且<strong>绝不隐式上传原片或照片至云端</strong>。
+            </div>
+
+            <h2>一、 概述与我们处理的信息</h2>
+            <p>LensDock 专为追求极致工作流掌控的摄影创作者打造。在底层设计上：</p>
+            <ul>
+                <li><strong>无需强制注册与登录：</strong> 使用基础拍摄、控制与选片功能无需绑定任何手机号、邮箱或个人实名信息。</li>
+                <li><strong>照片与素材文件安全：</strong> 从相机接收的原片或从本机相册挑选的照片仅保留在您的设备沙箱或指定目录中，我们绝不会将您的任何摄影作品上传至中心化服务器。</li>
+                <li><strong>完全由用户显式指令驱动：</strong> 数据传输仅在您明确触发（例如备份至个人局域网 NAS 或通过本地 Wi-Fi 分享）时发生。</li>
+            </ul>
+
+            <h2>二、 硬件相机品牌接入特别说明（佳能、尼康、索尼）</h2>
+            <p>本应用通过国际通用标准协议与硬件数码相机进行通信，请注意以下品牌兼容性说明：</p>
+            
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>相机品牌</th>
+                            <th>支持协议</th>
+                            <th>通信与数据处理范围</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>佳能 (Canon®)</strong></td>
+                            <td>USB Host (PTP / 佳能扩展协议), CCAPI (局域网)</td>
+                            <td>读取曝光参数 (Tv/Av/ISO)、电量、存储卡容量、实时取景画面。严格遵循官方公开规范，绝不修改相机固件或内部 EEPROM 校准数据。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>尼康 (Nikon®)</strong></td>
+                            <td>USB / PTP, PTP/IP</td>
+                            <td>本地高性能解码尼康 NEF/NRW 格式及嵌入式 MakerNotes 摄影元数据。快门控制严格遵循机身与镜头硬件限制，不进行非法指令注入。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>索尼 (Sony®)</strong></td>
+                            <td>USB PTP (电脑遥控 PC Remote / MTP), 局域网遥控</td>
+                            <td>支持索尼 Alpha 系列 ARW 原片解析与预览提取。所有元数据处理均在本地沙盒完成，绝不损坏原始 RAW 底片结构。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>商标与免责声明：</strong> Canon®、Nikon® 与 Sony® 分别为佳能株式会社、株式会社尼康与索尼集团公司的注册商标。<strong>LensDock 为第三方团队独立研发，非官方出品，亦未获得上述厂商的官方赞助、官方背书或授权代理。</strong></p>
+
+            <h2>三、 开源库与第三方技术组件披露</h2>
+            <p>为实现高保真 RAW 选片与标准元数据写入，LensDock 严谨集成了以下开源引擎并严格遵从开源协议：</p>
+            <ul>
+                <li><strong>ExifTool 与嵌入式 Perl 运行时：</strong> (Perl Artistic License / GNU GPL) 在 Android 隔离沙盒中高保真读写 EXIF、IPTC 与 XMP 伴随文件（.xmp）。</li>
+                <li><strong>LibRaw：</strong> (CDDL-1.0 / GNU LGPL-2.1) 高速提取 CR2/CR3、NEF、ARW 等全规格 RAW 文件的嵌入预览流，免去庞大云端解码开销。</li>
+                <li><strong>NanoHTTPD：</strong> (Modified BSD License) 轻量级内嵌式 HTTP 引擎，仅用于用户授权的同一 Wi-Fi 局域网内点对点传片，不开放公网端口。</li>
+                <li><strong>MMKV：</strong> (Apache License 2.0，腾讯开源) 用于高可靠存储调参预设、拍摄模板及用户界面日夜偏好。</li>
+                <li><strong>AndroidX Jetpack & Material Components：</strong> (Apache License 2.0，Google) 基础架构组件与 Material 3 视觉系统。</li>
+            </ul>
+
+            <h2>四、 权限申请与使用目的披露</h2>
+            <ul>
+                <li><strong>网络访问权限 (INTERNET)：</strong> 仅用于局域网连接无线 CCAPI / PTP-IP 相机、与用户配置的私有 NAS 同步原片，以及 Google Play Pro 订阅状态验证。</li>
+                <li><strong>网络状态感知：</strong> 在扫描设备前核对 Wi-Fi 连接状态，避免意外消耗蜂窝移动数据。</li>
+                <li><strong>USB 宿主权限：</strong> 仅在用户通过 OTG 数据线插入相机时由系统动态授权当前连接会话。</li>
+                <li><strong>存储访问框架 (SAF)：</strong> 通过原生文件选择器按需读写用户明确挑选的相册目录，不索取宽泛的 <code>MANAGE_EXTERNAL_STORAGE</code> 权限。</li>
+            </ul>
+
+            <h2>五、 数据保留与联系方式</h2>
+            <p>卸载应用或在设置中清除应用数据即可销毁所有本地配置与数据库。物理相机 SD 卡与手机相册内的原始照片均不受影响。</p>
+            <p>官方合规与反馈邮箱：<strong>support@lensdock.app</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 LensDock. All rights reserved. &nbsp;|&nbsp; <a href="cancellation.html">Account Cancellation Agreement</a> &nbsp;|&nbsp; <a href="https://github.com/wukuiqing49/LensDock" target="_blank">GitHub Repository</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            var en = document.getElementById('content-en');
+            var zh = document.getElementById('content-zh');
+            var title = document.getElementById('page-title');
+            var meta = document.getElementById('page-meta');
+            if (lang === 'zh') {
+                en.style.display = 'none';
+                zh.style.display = 'block';
+                title.innerText = '隐私政策 (Privacy Policy)';
+                meta.innerText = '生效日期：2026年11月2日 | 应用名称：LensDock';
+            } else {
+                zh.style.display = 'none';
+                en.style.display = 'block';
+                title.innerText = 'Privacy Policy';
+                meta.innerText = 'Effective Date: November 2, 2026 | Application: LensDock';
+            }
+        }
+        if (location.hash === '#zh') switchLang('zh');
+    </script>
+</body>
+</html>
