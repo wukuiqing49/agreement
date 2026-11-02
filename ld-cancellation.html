@@ -130,8 +130,7 @@
     <div class="container">
         <div class="header">
             <div class="nav-switch">
-                <a href="#zh" onclick="switchLang('zh')">简体中文</a>
-                <a href="privacy.html">Privacy Policy →</a>
+                <a id="lang-btn" href="javascript:void(0)" onclick="toggleLang()">简体中文</a>
             </div>
             <h1 id="page-title">Account Cancellation Agreement</h1>
             <div class="meta" id="page-meta">
@@ -204,27 +203,37 @@
         </div>
 
         <div class="footer">
-            <p>&copy; 2026 LensDock. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://github.com/wukuiqing49/LensDock" target="_blank">GitHub Repository</a></p>
+            <p>&copy; 2026 LensDock. All rights reserved. &nbsp;|&nbsp; <a href="https://github.com/wukuiqing49/LensDock" target="_blank">GitHub Repository</a></p>
         </div>
     </div>
 
     <script>
+        var currentLang = 'en';
         function switchLang(lang) {
+            currentLang = lang;
             var en = document.getElementById('content-en');
             var zh = document.getElementById('content-zh');
             var title = document.getElementById('page-title');
             var meta = document.getElementById('page-meta');
+            var langBtn = document.getElementById('lang-btn');
             if (lang === 'zh') {
                 en.style.display = 'none';
                 zh.style.display = 'block';
                 title.innerText = '账号注销与数据清除协议';
                 meta.innerText = '生效日期：2026年11月2日 | 应用名称：LensDock';
+                if (langBtn) langBtn.innerText = 'English';
+                location.hash = 'zh';
             } else {
                 zh.style.display = 'none';
                 en.style.display = 'block';
                 title.innerText = 'Account Cancellation Agreement';
                 meta.innerText = 'Effective Date: November 2, 2026 | Application: LensDock';
+                if (langBtn) langBtn.innerText = '简体中文';
+                location.hash = 'en';
             }
+        }
+        function toggleLang() {
+            switchLang(currentLang === 'en' ? 'zh' : 'en');
         }
         if (location.hash === '#zh') switchLang('zh');
     </script>
